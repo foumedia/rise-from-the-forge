@@ -18,12 +18,12 @@
       }
 
       ::-webkit-scrollbar-track {
-        background: #000; /* Black background for the track */
+        background: #050e04; /* Black background for the track */
       }
 
       ::-webkit-scrollbar-thumb {
         background: #33ff33; /* Green scrollbar thumb */
-        border: 2px solid #000; /* Black border around the thumb */
+        border: 2px solid #050e04; /* Black border around the thumb */
         border-radius: 6px; /* Rounded corners for the thumb */
       }
 
@@ -34,7 +34,7 @@
       body {
         width: 100%;
         height: 100%;
-        background: #000;
+        background: #050e04;
         color: #33ff33;
         font-size: 1.1rem;
         line-height: 1.5;
@@ -103,7 +103,7 @@
 
       .scrollbar::-webkit-scrollbar-thumb {
         background: #33ff33;
-        border: 2px solid #000;
+        border: 2px solid #050e04;
       }
 
       .carousel-section {
@@ -135,45 +135,40 @@
       }
 
       .green-table {
-        border-collapse: collapse;
+        display: flex;
+        flex-direction: column;
         margin-top: 1rem;
         color: #33ff33;
-        background-color: #000;
+        background-color: #050e04;
         font-size: 1.5rem;
       }
-      .half-width {
-        width: 50%;
-      }
 
-      .green-table{
-        table-layout: fixed;
-      }
-      .green-table th,
-      .green-table td {
-        /* border: 1px solid #33ff33; */
+      .green-table-header,
+      .green-table-row {
+        display: flex;
+        justify-content: space-between;
         padding: 0.5rem;
-        text-align: left;
-        width: 33%;
       }
 
-      .green-table th {
+      .green-table-header {
         background-color: #1a1a1a;
         font-weight: bold;
       }
 
-      .green-table tr:nth-child(even) {
-        background-color: #000;
+      .green-table-row:nth-child(even) {
+        background-color: #050e04;
       }
 
-      .green-table tbody:first-child:hover {
-        background-color: #1a1a1a;
-        color: #33ff33;
-      }
-
-      .green-table tbody tr:hover {
+      .green-table-row:hover {
         background-color: #33ff33;
         color: #121212;
       }
+
+      .green-table div {
+        flex: 1;
+        text-align: left;
+      }
+ 
 
       a {
         color: #ffd700; /* Golden text color */
@@ -247,7 +242,7 @@
               </p>
 
             <h3>How to Join the Action</h3>
-            <p>Demo games are available for new players and those who want to learn the game. If you are interested in a demo, please contact @Bastet or @dwillyskilly on Discord.</p>
+            <p>Demo games are available for new players! If you are interested in a demo, please contact @Bastet or @dwillyskilly on Discord.</p>
 
             <p>All campaign coordination happens on <a target="_blank"href="https://discord.gg/fabricatorsforge">our secure and stable Discord platform [LINK]</a>. Simply enter the <strong>#fallout</strong> channel to connect with fellow players, schedule games, get rules support, or share tales of your battlefield heroics.</p>
             <p class="footnote">
@@ -307,100 +302,82 @@
           content: `<div class='context-image'></div>
             <h2 id="LEGENDS">Legends of the Wasteland</h2>
             <p>Available Legends of the Wasteland</p>
-            <table class="green-table">
-              <thead>
-                <tr>
-                  <th>Legend Name</th>
-                  <th>Status</th>
-                  <th>Player</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>The Ghoul</td>
-                  <td>Alive</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Lucy</td>
-                  <td>Alive</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Maximus</td>
-                  <td>Alive</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>Mason</td>
-                  <td>Alive</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-            </table>`,
+            <div class="green-table">
+              <div class="green-table-header">
+                <div>Legend Name</div>
+                <div>Status</div>
+                <div>Player</div>
+              </div>
+              <div class="green-table-row">
+                <div>The Ghoul</div>
+                <div>Alive</div>
+                <div>-</div>
+              </div>
+              <div class="green-table-row">
+                <div>Lucy</div>
+                <div>Alive</div>
+                <div>-</div>
+              </div>
+              <div class="green-table-row">
+                <div>Maximus</div>
+                <div>Alive</div>
+                <div>-</div>
+              </div>
+              <div class="green-table-row">
+                <div>Mason</div>
+                <div>Alive</div>
+                <div>-</div>
+              </div>
+            </div>`,
         },
         {
           title: "RULES",
-          content: `<div class='context-image'></div><h2 id="HOUSE">House Rules</h2><p>House Rules for the Campaign...</p>
-            <h2>Agreed-Upon House Rules</h2>
-            <table class="green-table">
-              <thead>
-                <tr>
-                  <th>Rule</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Rule 1</td>
-                  <td>When playing a game, if it is either Player's (not Crew) First Game in the Campaign, instead of rolling on the Scenario Table, play in the Wasteland.</td>
-                </tr>
-                <tr>
-                  <td>Rule 2</td>
-                  <td>After playing a Game, if it is either Player's (not Crew) First Game in the Campaign, do not roll for Consequences or Injuries.</td>
-                </tr>
-                <!-- <tr>
-                  <td>Rule 3</td>
-                  <td>[Description of rule]</td>
-                </tr>
-                <tr>
-                  <td>Rule 4</td>
-                  <td>[Description of rule]</td>
-                </tr>
-                <tr>
-                  <td>Rule 5</td>
-                  <td>[Description of rule]</td>
-                </tr> -->
-              </tbody>
-            </table>`,
+          content: `<div class='context-image'></div><h2 id="HOUSE">House Rules</h2><p>Officially posted house rules</p>
+            <div class="green-table">
+              <div class="green-table-header">
+                <div>Rule</div>
+                <div>Description</div>
+              </div>
+              <div class="green-table-row" >
+                <div>Rule 1</div>
+                <div style="flex: 6;">When playing a game, if it is either Player's (not Crew) First Game in the Campaign, instead of rolling on the Scenario Table, play in the Wasteland.</div>
+              </div>
+              <div class="green-table-row">
+                <div >Rule 2</div>
+                <div style="flex: 6;">After playing a Game, if it is either Player's (not Crew) First Game in the Campaign, do not roll for Consequences or Injuries.</div>
+              </div>
+              <div class="green-table-row">
+                <div >Rule 3</div>
+                <div style="flex: 6;">Unofficial Faction lists are permitted with Overseer Approval.</div>
+              </div>
+            </div>`,
         },
         {
           title: "ASCENSION",
           content: `<div class='context-image'></div><h2 id="ASCENSION">Ascension Abilities</h2>
           
-            <table class="green-table">
-              <thead>
-                <tr>
-                  <th>Rule</th>
-                  <th>Name</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ASCENCSION RULE 1</td>
-                  <td>NOT ACTIVE</td>
-                </tr>
-                <tr>
-                  <td>ASCENCSION RULE 2</td>
-                  <td>NOT ACTIVE</td>
-                </tr> 
-                <tr>
-                  <td>ASCENCSION RULE 3</td>
-                  <td>NOT ACTIVE</td>
-                </tr>
-              </tbody>
-            </table>`,
+            <div class="green-table">
+              <div class="green-table-header">
+                <div>Rule</div>
+                <div>Name</div>
+                <div>Description</div>
+              </div>
+              <div class="green-table-row">
+                <div>ASCENCSION RULE 1</div>
+                <div>NOT ACTIVE</div>
+                <div></div>
+              </div>
+              <div class="green-table-row">
+                <div>ASCENCSION RULE 2</div>
+                <div>NOT ACTIVE</div>
+                <div></div>
+              </div> 
+              <div class="green-table-row">
+                <div>ASCENCSION RULE 3</div>
+                <div>NOT ACTIVE</div>
+                <div></div>
+              </div>
+            </div>`,
         },
         // {
         //   title: "BATTLE REPORTS",
