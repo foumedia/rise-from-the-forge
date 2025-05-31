@@ -21,12 +21,26 @@ sections.forEach((section, i) => {
 });
 
 function setActive(index) {
-  document.querySelectorAll(".carousel-section").forEach((el, i) => {
+  const navButtons = document.querySelectorAll("nav button");
+  navButtons.forEach((btn, i) => {
+    btn.classList.toggle("active", i === index); // Toggle active class
+  });
+
+  const carouselSections = document.querySelectorAll(".carousel-section");
+  carouselSections.forEach((el, i) => {
     el.classList.toggle("active", i === index);
     if (i === index && !el.innerHTML.trim()) {
       loadSectionContent(el.dataset.file, el);
     }
   });
+
+  // Add flicker effect
+  const activeSection = carouselSections[index];
+  activeSection.classList.add("flicker-effect");
+  setTimeout(() => {
+    activeSection.classList.remove("flicker-effect");
+  }, 500);
+
   window.location.hash = sections[index].title;
 }
 
