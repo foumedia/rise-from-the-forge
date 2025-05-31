@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campaign Codex</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #33ff33;
+      font-family: 'Share Tech Mono', monospace;
+      overflow: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      background-size: cover;
+      z-index: 9999;
+    }
+
+    body::before {
+      top: 0; left: 0; right: 0;
+      height: 40px;
+      background-image: url('assets/top-frame.png');
+    }
+
+    body::after {
+      bottom: 0; left: 0; right: 0;
+      height: 40px;
+      background-image: url('assets/bottom-frame.png');
+    }
+
+    .frame-left, .frame-right {
+      position: absolute;
+      top: 40px;
+      bottom: 40px;
+      width: 40px;
+      background-size: cover;
+      z-index: 9998;
+    }
+    .frame-left {
+      left: 0;
+      background-image: url('assets/left-frame.png');
+    }
+    .frame-right {
+      right: 0;
+      background-image: url('assets/right-frame.png');
+    }
+
+    .container {
+      position: absolute;
+      top: 40px;
+      bottom: 40px;
+      left: 40px;
+      right: 40px;
+      overflow: hidden;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #33ff33;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: #33ff33;
+      font-size: 1rem;
+      cursor: pointer;
+      text-shadow: 0 0 5px #33ff33;
+    }
+
+    nav button:hover {
+      color: #66ff66;
+    }
+
+    .content-area {
+      flex: 1;
+      overflow-y: auto;
+      position: relative;
+      padding-right: 2rem;
+    }
+
+    .scrollbar::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+      background: #33ff33;
+      border: 2px solid #000;
+    }
+
+    .carousel-section {
+      display: none;
+    }
+
+    .carousel-section.active {
+      display: block;
+    }
+
+    .context-image {
+      float: right;
+      width: 200px;
+      height: 200px;
+      margin: 0 0 1rem 1rem;
+      background-image: url('assets/pipboy-context.png');
+      background-size: cover;
+      border: 1px solid #33ff33;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 4px #33ff33;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame-left"></div>
+  <div class="frame-right"></div>
+
+  <div class="container">
+    <nav id="nav"></nav>
+    <div class="content-area scrollbar" id="carousel"></div>
+  </div>
+
+  <script>
+    const sections = [
+      {
+        title: "RIVAL BOARD",
+        content: "<div class='context-image'></div><h2>Rival Board</h2><p>This section tracks factions that oppose the players...</p>"
+      },
+      {
+        title: "CREW BOARD",
+        content: "<div class='context-image'></div><h2>Crew Board</h2><p>Track your team, roles, and missions here...</p>"
+      },
+      {
+        title: "LEGENDS OF THE WASTELAND",
+        content: "<div class='context-image'></div><h2>Legends of the Wasteland</h2><p>Notable figures and their legacies...</p>"
+      },
+      {
+        title: "HOUSE RULES",
+        content: "<div class='context-image'></div><h2>House Rules</h2><p>Custom gameplay tweaks for your campaign...</p>"
+      },
+      {
+        title: "ASCENSION ABILITIES",
+        content: "<div class='context-image'></div><h2>Ascension Abilities</h2><p>High-level perks and character evolution options...</p>"
+      },
+      {
+        title: "BATTLE REPORTS",
+        content: "<div class='context-image'></div><h2>Battle Reports</h2><p>Summaries of past encounters and key outcomes...</p>"
+      },
+      {
+        title: "PHOTOS",
+        content: "<div class='context-image'></div><h2>Photos</h2><p>Captured moments from the Wasteland...</p>"
+      },
+      {
+        title: "CHAT",
+        content: "<div class='context-image'></div><h2>Chat</h2><p>In-character messages or player banter here...</p>"
+      },
+      {
+        title: "INVITING PLAYERS",
+        content: "<div class='context-image'></div><h2>Inviting Players</h2><p>Guidance for bringing new people into the game...</p>"
+      },
+    ];
+
+    const nav = document.getElementById('nav');
+    const carousel = document.getElementById('carousel');
+
+    sections.forEach((section, i) => {
+      const btn = document.createElement('button');
+      btn.textContent = section.title;
+      btn.onclick = () => setActive(i);
+      nav.appendChild(btn);
+
+      const div = document.createElement('div');
+      div.className = 'carousel-section';
+      div.innerHTML = section.content;
+      carousel.appendChild(div);
+    });
+
+    function setActive(index) {
+      document.querySelectorAll('.carousel-section').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+      });
+    }
+
+    // Show first section by default
+    setActive(0);
+  </script>
+</body>
+</html>
