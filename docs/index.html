@@ -152,13 +152,12 @@
 
       .green-table-header {
         font-weight: bold;
-        background-color: rgb(51, 255, 51, .6);
+        background-color: rgb(51, 255, 51, 0.6);
         color: #050e04;
       }
 
       .green-table-row:nth-child(even) {
         background-color: #050e04;
-        
       }
 
       .green-table-row:hover {
@@ -170,7 +169,6 @@
         flex: 1;
         text-align: left;
       }
- 
 
       a {
         color: #ffd700; /* Golden text color */
@@ -219,188 +217,10 @@
 
     <script>
       const sections = [
-        {
-          title: "INTRO",
-          content: `<div class='context-image'></div>          
-          
-              <div class="terminal-warning">
-              <ul>
-                <li>*** WARNING: UNAUTHORIZED TERMINAL ACCESS DETECTED ***</li>
-              <li>> Attempting to trace PIP-BOY serial ID...</li>
-              <li>> Accessing Campaign Handbook: [RISE FROM THE FORGE]</li>
-              <li>> Loading Vault-Tec community engagement protocols...</li>
-              </ul>
-            </div>
-            <h2>Welcome, [UNAUTHORIZED USER]!</h2>
-            <p>You've just unlocked your authorized <strong>Vault-Tec Campaign Handbook</strong> for:</p>
-
-            <h2>RISE FROM THE FORGE</h2>
-
-            <p>Congratulations on surviving the post-apocalypse <em>and</em> making a fantastic choice to participate in <strong>Rise from the Forge</strong> — a <strong>Fallout: Factions</strong> skirmish Core Rulebook Campaign.</p>
-
-            <p>Set in a fractured region once ruled by steel, circuitry, and civic pride, and now occupied by Super Mutant warbands, Raider clans, Brotherhood of Steel patrols, Surface Dwellers, cultists, and other unregistered entities compete for control of the technologies of yesterday... and the future of tomorrow. 
-            <p class="footnote">
-            [Vault-Tec reminds all authorized personnel to report suspicious activity and maintain chain-of-command compliance at all times.]
-              </p>
-
-            <h3>How to Join the Action</h3>
-            <p>Demo games are available for new players! If you are interested in a demo, please contact @Bastet or @dwillyskilly on Discord.</p>
-
-            <p>All campaign coordination happens on <a target="_blank"href="https://discord.gg/fabricatorsforge">our secure and stable Discord platform [LINK]</a>. Simply enter the <strong>#fallout</strong> channel to connect with fellow players, schedule games, get rules support, or share tales of your battlefield heroics.</p>
-            <p class="footnote">
-              
-            (No G.E.C.K. required.)
-            </p>
-            <h3>Need Official Materials?</h3>
-            <p>Organizers are happy to share unit models and game resources to get you started. When you are ready to fully commit, you’ll want access to the most up-to-date tools and resources from Vault-Tec’s trusted partners:</p>
-            <ul>
-              <li> 
-                RULES: <a href="https://modiphius.net/en-us/products/fallout-factions-core-rulebook?_pos=1&_sid=3749dc415&_ss=r" target="_blank">Core Rulebook - <strong>Fallout: Factions</strong> </a>
-              </li>
-              <li>
-                CREW: <a href="https://www.modiphius.net/collections/fallout-factions" target="_blank">A Supported Factions Crew</a>
-              </li>
-              <li>
-                SUPPORT: <a href="https://shop.fabricatorsforge.com/search?q=fallout" target="_blank"><strong>Fabricator Forges</strong> online store for Fallout products. </a>
-              </li>
-            </ul> 
-
-            <p class="footnote">[If you can't find what you're looking for report them to your nearest Vault-Tec representative immediately.]</p>
-
-            <h3>What’s This Site For?</h3>
-            <p>This Handbook is your digital survival reference. Inside, you’ll find:</p>
-            <ul>
-              <li><a href="#LEGENDS">Legends of the Wasteland available for hire</a></li>
-              <li><a href="#RULES">House rules</a></li>
-              <li><a href="#ASCENSION">Active Ascension Crew Rules</a></li>
-            </ul>
-
-            <br>
-            <p>
-              <strong>Remember:</strong> Vault-Tec is with you every step of the way. With teamwork, , we’ll build a cleaner, brighter post-emergence future — fully compliant 
-            </p> 
-            <h2>Vault-Tec believes in you.</h2>
-            <p> With teamwork, determination, and the right dosage of RadAway, <em>you too</em> can rise from the forge of chaos and shape America's future.</p>
-
-            <p class="footnote">
-              Please consult your Vault Overseer before engaging in field activities.              Vault-Tec operations are fully compliant with Regulation 13-A: Civilian Equipment Reclamation and Defensive Systems Protocol. 
-            </p>
-
-          </section>
-          <p></p>`,
-        },
-        // {
-        //   title: "RIVAL BOARD",
-        //   content:
-        //     "<div class='context-image'></div><h2>Rival Board</h2><p>This section tracks factions that oppose the players...</p>",
-        // },
-        // {
-        //   title: "CREW BOARD",
-        //   content:
-        //     "<div class='context-image'></div><h2>Crew Board</h2><p>Track your team, roles, and missions here...</p>",
-        // },
-        {
-          title: "LEGENDS",
-          content: `<div class='context-image'></div>
-            <h2 id="LEGENDS">Legends of the Wasteland</h2>
-            <p>Available Legends of the Wasteland</p>
-            <div class="green-table">
-              <div class="green-table-header">
-                <div>Legend Name</div>
-                <div>Status</div>
-                <div>Player</div>
-              </div>
-              <div class="green-table-row">
-                <div>The Ghoul</div>
-                <div>Alive</div>
-                <div>-</div>
-              </div>
-              <div class="green-table-row">
-                <div>Lucy</div>
-                <div>Alive</div>
-                <div>-</div>
-              </div>
-              <div class="green-table-row">
-                <div>Maximus</div>
-                <div>Alive</div>
-                <div>-</div>
-              </div>
-              <div class="green-table-row">
-                <div>Mason</div>
-                <div>Alive</div>
-                <div>-</div>
-              </div>
-            </div>`,
-        },
-        {
-          title: "RULES",
-          content: `<div class='context-image'></div><h2 id="HOUSE">House Rules</h2><p>Officially posted house rules</p>
-            <div class="green-table">
-              <div class="green-table-header">
-                <div>Rule</div>
-                <div>Description</div>
-              </div>
-              <div class="green-table-row" >
-                <div>Rule 1</div>
-                <div style="flex: 6;">When playing a game, if it is either Player's (not Crew) First Game in the Campaign, instead of rolling on the Scenario Table, play in the Wasteland.</div>
-              </div>
-              <div class="green-table-row">
-                <div >Rule 2</div>
-                <div style="flex: 6;">After playing a Game, if it is either Player's (not Crew) First Game in the Campaign, do not roll for Consequences or Injuries.</div>
-              </div>
-              <div class="green-table-row">
-                <div >Rule 3</div>
-                <div style="flex: 6;">Unofficial Faction lists are permitted with Overseer Approval.</div>
-              </div>
-            </div>`,
-        },
-        {
-          title: "ASCENSION",
-          content: `<div class='context-image'></div><h2 id="ASCENSION">Ascension Abilities</h2>
-          
-            <div class="green-table">
-              <div class="green-table-header">
-                <div>Rule</div>
-                <div>Name</div>
-                <div>Description</div>
-              </div>
-              <div class="green-table-row">
-                <div>ASCENCSION RULE 1</div>
-                <div>NOT ACTIVE</div>
-                <div></div>
-              </div>
-              <div class="green-table-row">
-                <div>ASCENCSION RULE 2</div>
-                <div>NOT ACTIVE</div>
-                <div></div>
-              </div> 
-              <div class="green-table-row">
-                <div>ASCENCSION RULE 3</div>
-                <div>NOT ACTIVE</div>
-                <div></div>
-              </div>
-            </div>`,
-        },
-        // {
-        //   title: "BATTLE REPORTS",
-        //   content:
-        //     "<div class='context-image'></div><h2>Battle Reports</h2><p>Summaries of past encounters and key outcomes...</p>",
-        // },
-        // {
-        //   title: "PHOTOS",
-        //   content:
-        //     "<div class='context-image'></div><h2>Photos</h2><p>Captured moments from the Wasteland...</p>",
-        // },
-        // {
-        //   title: "CHAT",
-        //   content:
-        //     "<div class='context-image'></div><h2>Chat</h2><p>In-character messages or player banter here...</p>",
-        // },
-        // {
-        //   title: "INVITING PLAYERS",
-        //   content:
-        //     "<div class='context-image'></div><h2>Inviting Players</h2><p>Guidance for bringing new people into the game...</p>",
-        // },
+        { title: "INTRO", file: "./sections/intro.html" },
+        { title: "LEGENDS", file: "./sections/legends.html" },
+        { title: "RULES", file: "./sections/rules.html" },
+        { title: "ASCENSION", file: "./sections/ascension.html" },
       ];
 
       const nav = document.getElementById("nav");
@@ -414,16 +234,35 @@
 
         const div = document.createElement("div");
         div.className = "carousel-section-left carousel-section";
-        div.innerHTML = section.content;
+        div.dataset.file = section.file;
         carousel.appendChild(div);
       });
 
       function setActive(index) {
         document.querySelectorAll(".carousel-section").forEach((el, i) => {
           el.classList.toggle("active", i === index);
+          if (i === index && !el.innerHTML.trim()) {
+            loadSectionContent(el.dataset.file, el);
+          }
         });
-        // Update URL hash
         window.location.hash = sections[index].title;
+      }
+
+      function loadSectionContent(file, element) {
+        fetch(file)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then((html) => {
+            element.innerHTML = html;
+          })
+          .catch((error) => {
+            console.error(`Error loading ${file}:`, error);
+            element.innerHTML = `<p>Error loading content. Please try again later.</p>`;
+          });
       }
 
       function handleHashChange() {
@@ -432,12 +271,10 @@
         if (index !== -1) {
           setActive(index);
         } else {
-          // Default to INTRO if no valid hash is found
           setActive(0);
         }
       }
 
-      // Show first section by default or based on URL hash
       window.addEventListener("hashchange", handleHashChange);
       handleHashChange();
     </script>
