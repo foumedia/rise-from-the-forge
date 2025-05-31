@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Campaign Codex</title>
+    <title>Campaign Handbook</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
@@ -13,6 +13,23 @@
         box-sizing: border-box;
       }
 
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #000; /* Black background for the track */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #33ff33; /* Green scrollbar thumb */
+        border: 2px solid #000; /* Black border around the thumb */
+        border-radius: 6px; /* Rounded corners for the thumb */
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #66ff66; /* Lighter green on hover */
+      }
       html,
       body {
         width: 100%;
@@ -37,20 +54,32 @@
         border-bottom: 1px solid #33ff33;
         padding-bottom: 0.5rem;
         margin-bottom: 1rem;
+        flex-wrap: wrap; /* Allow wrapping for responsiveness */
       }
 
       nav button {
         background: none;
         border: none;
         color: #33ff33;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: bold;
         cursor: pointer;
         text-shadow: 0 0 5px #33ff33;
+        margin: 0.5rem; /* Add spacing between buttons */
+        flex: 1 1 auto; /* Make buttons flexible */
       }
 
-      nav button:hover {
-        color: #66ff66;
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Stack buttons vertically on smaller screens */
+          align-items: center; /* Center buttons */
+        }
+
+        nav button {
+          width: 100%; /* Make buttons take full width */
+          text-align: center; /* Center text inside buttons */
+          font-size: 1.4rem;
+        }
       }
 
       .content-area {
@@ -101,8 +130,8 @@
       }
 
       p {
+        color: rgb(51, 255, 51, 0.6);
         margin-bottom: 1rem;
-        opacity: 0.6;
       }
 
       .green-table {
@@ -116,11 +145,15 @@
         width: 50%;
       }
 
+      .green-table{
+        table-layout: fixed;
+      }
       .green-table th,
       .green-table td {
         /* border: 1px solid #33ff33; */
         padding: 0.5rem;
         text-align: left;
+        width: 33%;
       }
 
       .green-table th {
@@ -142,24 +175,6 @@
         color: #121212;
       }
 
-      ::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #000; /* Black background for the track */
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #33ff33; /* Green scrollbar thumb */
-        border: 2px solid #000; /* Black border around the thumb */
-        border-radius: 6px; /* Rounded corners for the thumb */
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #66ff66; /* Lighter green on hover */
-      }
-
       a {
         color: #ffd700; /* Golden text color */
         text-decoration: none; /* Remove underline */
@@ -172,9 +187,23 @@
 
       .footnote {
         font-size: 0.8rem;
-        opacity: 0.6;
+        opacity: 1;
         margin-top: 1rem;
         font-weight: lighter;
+      }
+
+      .terminal-warning {
+        font-family: monospace;
+        background-color: #111;
+        color: #0f0;
+        font-size: 0.9rem;
+        margin: 1rem;
+        border-radius: 6px;
+      }
+
+      .terminal-warning ul {
+        list-style-type: none; /* Remove bullets */
+        padding-left: 0; /* Remove left padding */
       }
     </style>
   </head>
@@ -197,14 +226,16 @@
           title: "INTRO",
           content: `<div class='context-image'></div>          
           
-              <pre style="font-family: monospace; background-color: #111; color: #0f0; padding: 1rem; border-radius: 6px;">
-              *** WARNING: UNAUTHORIZED TERMINAL ACCESS DETECTED ***
-              > Attempting to trace PIP-BOY serial ID...
-              > Accessing Campaign Codex: [RISE FROM THE FORGE]
-              > Loading Vault-Tec community engagement protocols...
-            </pre>
+              <div class="terminal-warning">
+              <ul>
+                <li>*** WARNING: UNAUTHORIZED TERMINAL ACCESS DETECTED ***</li>
+              <li>> Attempting to trace PIP-BOY serial ID...</li>
+              <li>> Accessing Campaign Handbook: [RISE FROM THE FORGE]</li>
+              <li>> Loading Vault-Tec community engagement protocols...</li>
+              </ul>
+            </div>
             <h2>Welcome, [UNAUTHORIZED USER]!</h2>
-            <p>You've just unlocked your authorized <strong>Vault-Tec Campaign Codex™</strong> for:</p>
+            <p>You've just unlocked your authorized <strong>Vault-Tec Campaign Handbook</strong> for:</p>
 
             <h2>RISE FROM THE FORGE</h2>
 
@@ -212,37 +243,39 @@
 
             <p>Set in a fractured region once ruled by steel, circuitry, and civic pride, and now occupied by Super Mutant warbands, Raider clans, Brotherhood of Steel patrols, Surface Dwellers, cultists, and other unregistered entities compete for control of the technologies of yesterday... and the future of tomorrow. 
             <p class="footnote">
-              Vault-Tec reminds all authorized personnel to report suspicious activity and maintain chain-of-command compliance at all times.
+            [Vault-Tec reminds all authorized personnel to report suspicious activity and maintain chain-of-command compliance at all times.]
               </p>
 
             <h3>How to Join the Action</h3>
-            <p>All campaign coordination happens on <a target="_blank"href="https://discord.gg/fabricatorsforge">our secure and stable Discord platform [LINK]</a>. Simply enter the <code>#fallout</code> channel to connect with fellow players, schedule games, get rules support, or share tales of your battlefield heroics.</p>
+            <p>Demo games are available for new players and those who want to learn the game. If you are interested in a demo, please contact @Bastet or @dwillyskilly on Discord.</p>
+
+            <p>All campaign coordination happens on <a target="_blank"href="https://discord.gg/fabricatorsforge">our secure and stable Discord platform [LINK]</a>. Simply enter the <strong>#fallout</strong> channel to connect with fellow players, schedule games, get rules support, or share tales of your battlefield heroics.</p>
             <p class="footnote">
+              
             (No G.E.C.K. required.)
             </p>
             <h3>Need Official Materials?</h3>
-            <p>To fully participate, you’ll want access to the most up-to-date tools and resources from Vault-Tec’s trusted partners:</p>
+            <p>Organizers are happy to share unit models and game resources to get you started. When you are ready to fully commit, you’ll want access to the most up-to-date tools and resources from Vault-Tec’s trusted partners:</p>
             <ul>
               <li> 
-                <a href="https://modiphius.net/en-us/products/fallout-factions-core-rulebook?_pos=1&_sid=3749dc415&_ss=r" target="_blank">Core Rulebook - <strong>Fallout: Factions</strong> </a>
+                RULES: <a href="https://modiphius.net/en-us/products/fallout-factions-core-rulebook?_pos=1&_sid=3749dc415&_ss=r" target="_blank">Core Rulebook - <strong>Fallout: Factions</strong> </a>
               </li>
               <li>
-                <a href="https://www.modiphius.net/collections/fallout-factions" target="_blank">Currently supported Factions Core Set</a>
+                CREW: <a href="https://www.modiphius.net/collections/fallout-factions" target="_blank">A Supported Factions Crew</a>
               </li>
               <li>
-                <a href="https://shop.fabricatorsforge.com/" target="_blank"><strong>Fabricator Forges</strong> store for Fallout products. </a>
+                SUPPORT: <a href="https://shop.fabricatorsforge.com/search?q=fallout" target="_blank"><strong>Fabricator Forges</strong> online store for Fallout products. </a>
               </li>
             </ul> 
 
-            <p class="footnote">If you can't find what you're looking for report them to your nearest Vault-Tec representative immediately.</p>
+            <p class="footnote">[If you can't find what you're looking for report them to your nearest Vault-Tec representative immediately.]</p>
 
             <h3>What’s This Site For?</h3>
-            <p>This Codex is your digital survival guide for campaign play. Inside, you’ll find:</p>
+            <p>This Handbook is your digital survival reference. Inside, you’ll find:</p>
             <ul>
-              <li>Legends of the Wasteland available for hire</li>
-              <li>House rules</li>
-              <li>Active Ascension Crew Rules</li>
-              <li>Updates from the Campaign Overseer</li>
+              <li><a href="#LEGENDS">Legends of the Wasteland available for hire</a></li>
+              <li><a href="#RULES">House rules</a></li>
+              <li><a href="#ASCENSION">Active Ascension Crew Rules</a></li>
             </ul>
 
             <br>
@@ -307,7 +340,7 @@
             </table>`,
         },
         {
-          title: "HOUSE",
+          title: "RULES",
           content: `<div class='context-image'></div><h2 id="HOUSE">House Rules</h2><p>House Rules for the Campaign...</p>
             <h2>Agreed-Upon House Rules</h2>
             <table class="green-table">
