@@ -3,171 +3,431 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fallout Miniature Campaign</title>
-    <link rel="stylesheet" href="styles/style.css" />
-
+    <title>Campaign Codex</title>
     <style>
-      body {
+      @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+      * {
         margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #f4f4f4;
-        background-color: #121212;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      header {
-        background: url("header-image.jpg") center/cover no-repeat;
-        height: 300px;
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #33ff33;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        font-family: "Share Tech Mono", monospace;
+      }
+
+      .container {
+        overflow: hidden;
+        padding: 1rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-      }
-
-      header h1 {
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 1rem 2rem;
-        border-radius: 10px;
-        font-size: 2.5rem;
+        flex-direction: column;
       }
 
       nav {
-        background-color: #1e1e1e;
-        padding: 2rem 1rem;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #33ff33;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
       }
 
-      .nav-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
-        max-width: 900px;
-        margin: 0 auto;
+      nav button {
+        background: none;
+        border: none;
+        color: #33ff33;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        text-shadow: 0 0 5px #33ff33;
       }
 
-      .nav-grid a {
-        background: #333;
-        padding: 1rem;
-        border-radius: 8px;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-        transition: background 0.3s;
+      nav button:hover {
+        color: #66ff66;
       }
 
-      .nav-grid a:hover {
-        background: #555;
+      .content-area {
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+        position: relative;
+        padding-right: 2rem;
       }
 
-      section {
-        padding: 3rem 1rem;
-        max-width: 800px;
-        margin: auto;
+      .content-area-right {
+        flex: 1;
+        overflow-y: auto;
+        position: relative;
+        padding-right: 2rem;
       }
 
-      .how-to {
-        background: url("background-howto.jpg") center/cover no-repeat;
-        background-attachment: fixed;
+      .scrollbar::-webkit-scrollbar {
+        width: 12px;
       }
 
-      .flavor {
-        background: url("background-flavor.jpg") center/cover no-repeat;
-        background-attachment: fixed;
+      .scrollbar::-webkit-scrollbar-thumb {
+        background: #33ff33;
+        border: 2px solid #000;
       }
 
-      .section-overlay {
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 2rem;
-        border-radius: 10px;
+      .carousel-section {
+        display: none;
+      }
+
+      .carousel-section.active {
+        display: block;
+      }
+      .context-image {
+        float: right;
+        width: 200px;
+        height: 200px;
+        margin: 0 0 1rem 1rem;
+        background-image: url("assets/pipboy-context.png");
+        background-size: cover;
+        border: 0px solid #33ff33;
       }
 
       h2 {
-        margin-top: 0;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 4px #33ff33;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        opacity: 0.6;
+      }
+
+      .green-table {
+        border-collapse: collapse;
+        margin-top: 1rem;
+        color: #33ff33;
+        background-color: #000;
+        font-size: 1.5rem;
+      }
+      .half-width {
+        width: 50%;
+      }
+
+      .green-table th,
+      .green-table td {
+        /* border: 1px solid #33ff33; */
+        padding: 0.5rem;
+        text-align: left;
+      }
+
+      .green-table th {
+        background-color: #1a1a1a;
+        font-weight: bold;
+      }
+
+      .green-table tr:nth-child(even) {
+        background-color: #000;
+      }
+
+      .green-table tbody:first-child:hover {
+        background-color: #1a1a1a;
+        color: #33ff33;
+      }
+
+      .green-table tbody tr:hover {
+        background-color: #33ff33;
+        color: #121212;
+      }
+
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #000; /* Black background for the track */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #33ff33; /* Green scrollbar thumb */
+        border: 2px solid #000; /* Black border around the thumb */
+        border-radius: 6px; /* Rounded corners for the thumb */
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #66ff66; /* Lighter green on hover */
+      }
+
+      a {
+        color: #ffd700; /* Golden text color */
+        text-decoration: none; /* Remove underline */
+      }
+
+      a:hover {
+        color: #ffa500; /* Lighter golden color on hover */
+        text-decoration: underline; /* Add underline on hover */
+      }
+
+      .footnote {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-top: 1rem;
+        font-weight: lighter;
       }
     </style>
   </head>
   <body>
-    <div class="splash-container">
-      <header class="splash-header">
-        <h1>Fallout Miniature Campaign</h1>
-        <p>Rise from the ashes and forge your legacy in the wasteland!</p>
-      </header>
-      <nav class="splash-nav">
-        <ul>
-          <li><a href="pages/rival-board.html">Rival Board</a></li>
-          <li><a href="pages/crew-board.html">Crew Board</a></li>
-          <li>
-            <a href="pages/legends-of-the-wasteland.html"
-              >Legends of the Wasteland</a
-            >
-          </li>
-          <li><a href="pages/house-rules.html">House Rules</a></li>
-          <li>
-            <a href="pages/ascension-abilities.html">Ascension Abilities</a>
-          </li>
-          <li><a href="pages/battle-reports.html">Battle Reports</a></li>
-          <li><a href="pages/photos-gallery.html">Photos Gallery</a></li>
-        </ul>
-      </nav>
-      <div class="splash-images">
-        <img src="assets/placeholder1.jpg" alt="Post-apocalyptic scene" />
-        <img src="assets/placeholder2.jpg" alt="Wasteland warriors" />
-        <img src="assets/placeholder3.jpg" alt="Fallout miniatures" />
+    <div class="frame-left"></div>
+    <div class="frame-right"></div>
+    <div class="frame-top"></div>
+    <div class="frame-bottom"></div>
+
+    <div class="container">
+      <nav id="nav"></nav>
+      <div class="content-area scrollbar" id="carousel">
+        <div class="content-area-left"></div>
       </div>
     </div>
-    <footer class="splash-footer">
-      <p>&copy; 2023 Fallout Miniature Campaign. All rights reserved.</p>
-    </footer>
 
-    <header>
-      <h1>Welcome to the Campaign Hub</h1>
-    </header>
+    <script>
+      const sections = [
+        {
+          title: "INTRO",
+          content: `<div class='context-image'></div>          
+          
+              <pre style="font-family: monospace; background-color: #111; color: #0f0; padding: 1rem; border-radius: 6px;">
+              *** WARNING: UNAUTHORIZED TERMINAL ACCESS DETECTED ***
+              > Attempting to trace PIP-BOY serial ID...
+              > Accessing Campaign Codex: [RISE FROM THE FORGE]
+              > Loading Vault-Tec community engagement protocols...
+            </pre>
+            <h2>Welcome, [UNAUTHORIZED USER]!</h2>
+            <p>You've just unlocked your authorized <strong>Vault-Tec Campaign Codex™</strong> for:</p>
 
-    <nav>
-      <div class="nav-grid">
-        <a href="rules-core.html">Core Rules</a>
-        <a href="rules-combat.html">Combat</a>
-        <a href="rules-magic.html">Magic</a>
-        <a href="rules-gear.html">Gear</a>
-        <a href="rules-factions.html">Factions</a>
-        <a href="rules-quests.html">Quests</a>
-      </div>
-    </nav>
+            <h2>RISE FROM THE FORGE</h2>
 
-    <section class="how-to">
-      <div class="section-overlay">
-        <h2>How to Use This Site</h2>
-        <p>
-          This site is designed for quick reference during play. Use the
-          navigation buttons above to jump directly to specific rule sets. Each
-          page is mobile-friendly and includes links back to this home page.
-        </p>
-        <p>
-          New players should start with the Core Rules. If you're in combat,
-          jump straight to the Combat page. Game masters can check Factions and
-          Quests for narrative hooks and updates.
-        </p>
-      </div>
-    </section>
+            <p>Congratulations on surviving the post-apocalypse <em>and</em> making a fantastic choice to participate in <strong>Rise from the Forge</strong> — a <strong>Fallout: Factions</strong> skirmish Core Rulebook Campaign.</p>
 
-    <section class="flavor">
-      <div class="section-overlay">
-        <h2>World of the Fractured Realms</h2>
-        <p>
-          The cataclysm tore the continents asunder, but in the voids between,
-          new powers rose. Skyfaring cities float above scorched valleys, while
-          ancient machines awaken below. Whether you’re a relic hunter, an
-          arcane renegade, or a soldier of the shifting alliances, the world is
-          yours to explore — or burn.
-        </p>
-        <p>
-          Take a moment to read the lore, explore the factions, and immerse
-          yourself in the living history of the campaign. The world is vast, and
-          not even the stars can show you all its secrets.
-        </p>
-      </div>
-    </section>
+            <p>Set in a fractured region once ruled by steel, circuitry, and civic pride, and now occupied by Super Mutant warbands, Raider clans, Brotherhood of Steel patrols, Surface Dwellers, cultists, and other unregistered entities compete for control of the technologies of yesterday... and the future of tomorrow. 
+            <p class="footnote">
+              Vault-Tec reminds all authorized personnel to report suspicious activity and maintain chain-of-command compliance at all times.
+              </p>
 
+            <h3>How to Join the Action</h3>
+            <p>All campaign coordination happens on <a target="_blank"href="https://discord.gg/fabricatorsforge">our secure and stable Discord platform [LINK]</a>. Simply enter the <code>#fallout</code> channel to connect with fellow players, schedule games, get rules support, or share tales of your battlefield heroics.</p>
+            <p class="footnote">
+            (No G.E.C.K. required.)
+            </p>
+            <h3>Need Official Materials?</h3>
+            <p>To fully participate, you’ll want access to the most up-to-date tools and resources from Vault-Tec’s trusted partners:</p>
+            <ul>
+              <li> 
+                <a href="https://modiphius.net/en-us/products/fallout-factions-core-rulebook?_pos=1&_sid=3749dc415&_ss=r" target="_blank">Core Rulebook - <strong>Fallout: Factions</strong> </a>
+              </li>
+              <li>
+                <a href="https://www.modiphius.net/collections/fallout-factions" target="_blank">Currently supported Factions Core Set</a>
+              </li>
+              <li>
+                <a href="https://shop.fabricatorsforge.com/" target="_blank"><strong>Fabricator Forges</strong> store for Fallout products. </a>
+              </li>
+            </ul> 
 
+            <p class="footnote">If you can't find what you're looking for report them to your nearest Vault-Tec representative immediately.</p>
+
+            <h3>What’s This Site For?</h3>
+            <p>This Codex is your digital survival guide for campaign play. Inside, you’ll find:</p>
+            <ul>
+              <li>Legends of the Wasteland available for hire</li>
+              <li>House rules</li>
+              <li>Active Ascension Crew Rules</li>
+              <li>Updates from the Campaign Overseer</li>
+            </ul>
+
+            <br>
+            <p>
+              <strong>Remember:</strong> Vault-Tec is with you every step of the way. With teamwork, , we’ll build a cleaner, brighter post-emergence future — fully compliant 
+            </p> 
+            <h2>Vault-Tec believes in you.</h2>
+            <p> With teamwork, determination, and the right dosage of RadAway, <em>you too</em> can rise from the forge of chaos and shape America's future.</p>
+
+            <p class="footnote">
+              Please consult your Vault Overseer before engaging in field activities.              Vault-Tec operations are fully compliant with Regulation 13-A: Civilian Equipment Reclamation and Defensive Systems Protocol. 
+            </p>
+
+          </section>
+          <p></p>`,
+        },
+        // {
+        //   title: "RIVAL BOARD",
+        //   content:
+        //     "<div class='context-image'></div><h2>Rival Board</h2><p>This section tracks factions that oppose the players...</p>",
+        // },
+        // {
+        //   title: "CREW BOARD",
+        //   content:
+        //     "<div class='context-image'></div><h2>Crew Board</h2><p>Track your team, roles, and missions here...</p>",
+        // },
+        {
+          title: "LEGENDS",
+          content: `<div class='context-image'></div>
+            <h2 id="LEGENDS">Legends of the Wasteland</h2>
+            <p>Available Legends of the Wasteland</p>
+            <table class="green-table">
+              <thead>
+                <tr>
+                  <th>Legend Name</th>
+                  <th>Status</th>
+                  <th>Player</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>The Ghoul</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Lucy</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Maximus</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Mason</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>`,
+        },
+        {
+          title: "HOUSE",
+          content: `<div class='context-image'></div><h2 id="HOUSE">House Rules</h2><p>House Rules for the Campaign...</p>
+            <h2>Agreed-Upon House Rules</h2>
+            <table class="green-table">
+              <thead>
+                <tr>
+                  <th>Rule</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rule 1</td>
+                  <td>When playing a game, if it is either Player's (not Crew) First Game in the Campaign, instead of rolling on the Scenario Table, play in the Wasteland.</td>
+                </tr>
+                <tr>
+                  <td>Rule 2</td>
+                  <td>After playing a Game, if it is either Player's (not Crew) First Game in the Campaign, do not roll for Consequences or Injuries.</td>
+                </tr>
+                <!-- <tr>
+                  <td>Rule 3</td>
+                  <td>[Description of rule]</td>
+                </tr>
+                <tr>
+                  <td>Rule 4</td>
+                  <td>[Description of rule]</td>
+                </tr>
+                <tr>
+                  <td>Rule 5</td>
+                  <td>[Description of rule]</td>
+                </tr> -->
+              </tbody>
+            </table>`,
+        },
+        {
+          title: "ASCENSION",
+          content: `<div class='context-image'></div><h2 id="ASCENSION">Ascension Abilities</h2>
+          
+            <table class="green-table">
+              <thead>
+                <tr>
+                  <th>Rule</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ASCENCSION RULE 1</td>
+                  <td>NOT ACTIVE</td>
+                </tr>
+                <tr>
+                  <td>ASCENCSION RULE 2</td>
+                  <td>NOT ACTIVE</td>
+                </tr> 
+                <tr>
+                  <td>ASCENCSION RULE 3</td>
+                  <td>NOT ACTIVE</td>
+                </tr>
+              </tbody>
+            </table>`,
+        },
+        // {
+        //   title: "BATTLE REPORTS",
+        //   content:
+        //     "<div class='context-image'></div><h2>Battle Reports</h2><p>Summaries of past encounters and key outcomes...</p>",
+        // },
+        // {
+        //   title: "PHOTOS",
+        //   content:
+        //     "<div class='context-image'></div><h2>Photos</h2><p>Captured moments from the Wasteland...</p>",
+        // },
+        // {
+        //   title: "CHAT",
+        //   content:
+        //     "<div class='context-image'></div><h2>Chat</h2><p>In-character messages or player banter here...</p>",
+        // },
+        // {
+        //   title: "INVITING PLAYERS",
+        //   content:
+        //     "<div class='context-image'></div><h2>Inviting Players</h2><p>Guidance for bringing new people into the game...</p>",
+        // },
+      ];
+
+      const nav = document.getElementById("nav");
+      const carousel = document.getElementById("carousel");
+
+      sections.forEach((section, i) => {
+        const btn = document.createElement("button");
+        btn.textContent = section.title;
+        btn.onclick = () => setActive(i);
+        nav.appendChild(btn);
+
+        const div = document.createElement("div");
+        div.className = "carousel-section-left carousel-section";
+        div.innerHTML = section.content;
+        carousel.appendChild(div);
+      });
+
+      function setActive(index) {
+        document.querySelectorAll(".carousel-section").forEach((el, i) => {
+          el.classList.toggle("active", i === index);
+        });
+        // Update URL hash
+        window.location.hash = sections[index].title;
+      }
+
+      function handleHashChange() {
+        const hash = window.location.hash.substring(1);
+        const index = sections.findIndex((section) => section.title === hash);
+        if (index !== -1) {
+          setActive(index);
+        } else {
+          // Default to INTRO if no valid hash is found
+          setActive(0);
+        }
+      }
+
+      // Show first section by default or based on URL hash
+      window.addEventListener("hashchange", handleHashChange);
+      handleHashChange();
+    </script>
   </body>
 </html>
