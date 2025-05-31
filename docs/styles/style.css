@@ -224,3 +224,14 @@ a:hover {
     opacity: 1;
   }
 }
+
+.two-column-layout {
+  display: flex;
+  gap: 2rem;
+}
+
+.column {
+  flex: 1;
+  padding: 1rem;
+  box-sizing: border-box;
+}
