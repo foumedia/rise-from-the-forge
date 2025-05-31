@@ -92,6 +92,15 @@ nav button.active {
   .green-table div {
     margin-bottom: 0.5rem; /* Add spacing between stacked items */
   }
+
+  .two-column-layout {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 1rem; /* Reduce gap between columns */
+  }
+
+  .column {
+    width: 100%; /* Ensure columns take full width */
+  }
 }
 
 .content-area {
