@@ -1,36 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fallout Miniature Campaign</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #f4f4f4;
+        background-color: #121212;
+      }
+
+      header {
+        background: url("header-image.jpg") center/cover no-repeat;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      header h1 {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-size: 2.5rem;
+      }
+
+      nav {
+        background-color: #1e1e1e;
+        padding: 2rem 1rem;
+      }
+
+      .nav-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .nav-grid a {
+        background: #333;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        transition: background 0.3s;
+      }
+
+      .nav-grid a:hover {
+        background: #555;
+      }
+
+      section {
+        padding: 3rem 1rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .how-to {
+        background: url("background-howto.jpg") center/cover no-repeat;
+        background-attachment: fixed;
+      }
+
+      .flavor {
+        background: url("background-flavor.jpg") center/cover no-repeat;
+        background-attachment: fixed;
+      }
+
+      .section-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
     <div class="splash-container">
-        <header class="splash-header">
-            <h1>Fallout Miniature Campaign</h1>
-            <p>Rise from the ashes and forge your legacy in the wasteland!</p>
-        </header>
-        <nav class="splash-nav">
-            <ul>
-                <li><a href="pages/rival-board.html">Rival Board</a></li>
-                <li><a href="pages/crew-board.html">Crew Board</a></li>
-                <li><a href="pages/legends-of-the-wasteland.html">Legends of the Wasteland</a></li>
-                <li><a href="pages/house-rules.html">House Rules</a></li>
-                <li><a href="pages/ascension-abilities.html">Ascension Abilities</a></li>
-                <li><a href="pages/battle-reports.html">Battle Reports</a></li>
-                <li><a href="pages/photos-gallery.html">Photos Gallery</a></li>
-            </ul>
-        </nav>
-        <div class="splash-images">
-            <img src="assets/placeholder1.jpg" alt="Post-apocalyptic scene">
-            <img src="assets/placeholder2.jpg" alt="Wasteland warriors">
-            <img src="assets/placeholder3.jpg" alt="Fallout miniatures">
-        </div>
+      <header class="splash-header">
+        <h1>Fallout Miniature Campaign</h1>
+        <p>Rise from the ashes and forge your legacy in the wasteland!</p>
+      </header>
+      <nav class="splash-nav">
+        <ul>
+          <li><a href="pages/rival-board.html">Rival Board</a></li>
+          <li><a href="pages/crew-board.html">Crew Board</a></li>
+          <li>
+            <a href="pages/legends-of-the-wasteland.html"
+              >Legends of the Wasteland</a
+            >
+          </li>
+          <li><a href="pages/house-rules.html">House Rules</a></li>
+          <li>
+            <a href="pages/ascension-abilities.html">Ascension Abilities</a>
+          </li>
+          <li><a href="pages/battle-reports.html">Battle Reports</a></li>
+          <li><a href="pages/photos-gallery.html">Photos Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="splash-images">
+        <img src="assets/placeholder1.jpg" alt="Post-apocalyptic scene" />
+        <img src="assets/placeholder2.jpg" alt="Wasteland warriors" />
+        <img src="assets/placeholder3.jpg" alt="Fallout miniatures" />
+      </div>
     </div>
     <footer class="splash-footer">
-        <p>&copy; 2023 Fallout Miniature Campaign. All rights reserved.</p>
+      <p>&copy; 2023 Fallout Miniature Campaign. All rights reserved.</p>
     </footer>
-</body>
+
+    <header>
+      <h1>Welcome to the Campaign Hub</h1>
+    </header>
+
+    <nav>
+      <div class="nav-grid">
+        <a href="rules-core.html">Core Rules</a>
+        <a href="rules-combat.html">Combat</a>
+        <a href="rules-magic.html">Magic</a>
+        <a href="rules-gear.html">Gear</a>
+        <a href="rules-factions.html">Factions</a>
+        <a href="rules-quests.html">Quests</a>
+      </div>
+    </nav>
+
+    <section class="how-to">
+      <div class="section-overlay">
+        <h2>How to Use This Site</h2>
+        <p>
+          This site is designed for quick reference during play. Use the
+          navigation buttons above to jump directly to specific rule sets. Each
+          page is mobile-friendly and includes links back to this home page.
+        </p>
+        <p>
+          New players should start with the Core Rules. If you're in combat,
+          jump straight to the Combat page. Game masters can check Factions and
+          Quests for narrative hooks and updates.
+        </p>
+      </div>
+    </section>
+
+    <section class="flavor">
+      <div class="section-overlay">
+        <h2>World of the Fractured Realms</h2>
+        <p>
+          The cataclysm tore the continents asunder, but in the voids between,
+          new powers rose. Skyfaring cities float above scorched valleys, while
+          ancient machines awaken below. Whether you’re a relic hunter, an
+          arcane renegade, or a soldier of the shifting alliances, the world is
+          yours to explore — or burn.
+        </p>
+        <p>
+          Take a moment to read the lore, explore the factions, and immerse
+          yourself in the living history of the campaign. The world is vast, and
+          not even the stars can show you all its secrets.
+        </p>
+      </div>
+    </section>
+  </body>
 </html>
