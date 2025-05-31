@@ -1,277 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campaign Codex</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campaign Codex</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    html, body {
-      width: 100%;
-      height: 100%;
-      background: #000;
-      color: #33ff33;
-      font-family: 'Share Tech Mono', monospace;
-      overflow: hidden;
-    }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #33ff33;
+        font-family: "Share Tech Mono", monospace;
+        overflow: hidden;
+      }
 
-    body::before,
-    body::after {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-      background-size: cover;
-      z-index: 9999;
-    }
+      body::before,
+      body::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        background-size: cover;
+        z-index: 9999;
+      }
 
-    body::before {
-      top: 40px;
-      left: 0; right: 0;
-      height: 40px;
-      background-image: url('assets/top-frame.png');
-    }
+      body::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background-image: url("assets/top-frame.png");
+      }
 
-    body::after {
-      bottom: 0; left: 0; right: 0;
-      height: 40px;
-      background-image: url('assets/bottom-frame.png');
-    }
+      body::after {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background-image: url("assets/bottom-frame.png");
+      }
 
-    .frame-left, .frame-right {
-      position: absolute;
-      top: 80px;
-      bottom: 40px;
-      width: 40px;
-      background-size: cover;
-      z-index: 9998;
-    }
-    .frame-left {
-      left: 0;
-      background-image: url('assets/left-frame.png');
-    }
-    .frame-right {
-      right: 0;
-      background-image: url('assets/right-frame.png');
-    }
+      .frame-left,
+      .frame-right {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 40px;
+        background-size: cover;
+        z-index: 9998;
+      }
+      .frame-left {
+        left: 0;
+        background-image: url("assets/left-frame.png");
+      }
+      .frame-right {
+        right: 0;
+        background-image: url("assets/right-frame.png");
+      }
 
-    .top-header-bar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 40px;
-      background: #000;
-      z-index: 10001;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-      border-bottom: 1px solid #33ff33;
-      text-shadow: 0 0 4px #33ff33;
-    }
+      .container {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        left: 40px;
+        right: 40px;
+        overflow: hidden;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+      }
 
-    .top-header-bar .campaign-title {
-      font-size: 1.2rem;
-      color: #33ff33;
-    }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #33ff33;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
 
-    .top-header-bar .discord-link a {
-      display: flex;
-      align-items: center;
-      color: #33ff33;
-      text-decoration: none;
-      font-size: 1rem;
-    }
+      nav button {
+        background: none;
+        border: none;
+        color: #33ff33;
+        font-size: 1rem;
+        cursor: pointer;
+        text-shadow: 0 0 5px #33ff33;
+      }
 
-    .top-header-bar .discord-link img {
-      height: 24px;
-      margin-right: 0.5rem;
-    }
+      nav button:hover {
+        color: #66ff66;
+      }
 
-    .container {
-      position: absolute;
-      top: 80px;
-      bottom: 40px;
-      left: 40px;
-      right: 40px;
-      overflow: hidden;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-    }
+      .content-area {
+        flex: 1;
+        overflow-y: auto;
+        position: relative;
+        padding-right: 2rem;
+      }
 
-    nav {
-      display: flex;
-      justify-content: space-around;
-      border-bottom: 1px solid #33ff33;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+      .scrollbar::-webkit-scrollbar {
+        width: 12px;
+      }
 
-    nav button {
-      background: none;
-      border: none;
-      color: #33ff33;
-      font-size: 1rem;
-      cursor: pointer;
-      text-shadow: 0 0 5px #33ff33;
-      position: relative;
-    }
+      .scrollbar::-webkit-scrollbar-thumb {
+        background: #33ff33;
+        border: 2px solid #000;
+      }
 
-    nav button:hover {
-      color: #66ff66;
-    }
+      .carousel-section {
+        display: none;
+      }
 
-    nav button::after {
-      content: "_";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -0.2rem;
-      font-size: 1rem;
-      line-height: 1;
-      color: #33ff33;
-      animation: blinkCursor 1s steps(1) infinite;
-      opacity: 0;
-    }
+      .carousel-section.active {
+        display: block;
+      }
+      .context-image {
+        float: right;
+        width: 200px;
+        height: 200px;
+        margin: 0 0 1rem 1rem;
+        background-image: url("assets/pipboy-context.png");
+        background-size: cover;
+        border: 1px solid #33ff33;
+      }
 
-    nav button:hover::after,
-    nav button.active-btn::after {
-      opacity: 1;
-    }
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 0 0 4px #33ff33;
+      }
 
-    @keyframes blinkCursor {
-      0%, 49% { opacity: 1; }
-      50%, 99% { opacity: 0; }
-      100% { opacity: 1; }
-    }
+      p {
+        margin-bottom: 1rem;
+      }
 
-    .content-area {
-      flex: 1;
-      overflow-y: auto;
-      position: relative;
-      padding-right: 2rem;
-    }
+      .green-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        color: #33ff33;
+        background-color: #121212;
+      }
 
-    .scrollbar::-webkit-scrollbar {
-      width: 12px;
-    }
+      .green-table th,
+      .green-table td {
+        border: 1px solid #33ff33;
+        padding: 0.5rem;
+        text-align: left;
+      }
 
-    .scrollbar::-webkit-scrollbar-thumb {
-      background: #33ff33;
-      border: 2px solid #000;
-    }
+      .green-table th {
+        background-color: #1a1a1a;
+        font-weight: bold;
+      }
 
-    .carousel-section {
-      display: none;
-    }
+      .green-table tr:nth-child(even) {
+        background-color: #1a1a1a;
+      }
 
-    .carousel-section.active {
-      display: block;
-    }
+      .green-table tr:hover {
+        background-color: #33ff33;
+        color: #121212;
+      }
+      /* 
+      .frame-left,
+      .frame-right,
+      .frame-top,
+      .frame-bottom {
+        position: absolute;
+        background-size: cover;
+        z-index: 10;
+      }
 
-    .context-image {
-      float: right;
-      width: 200px;
-      height: 200px;
-      margin: 0 0 1rem 1rem;
-      background-image: url('assets/pipboy-context.png');
-      background-size: cover;
-      border: 1px solid #33ff33;
-    }
+      .frame-left {
+        top: 0;
+        left: -10px;
+        width: 50px;
+        height: 100%;
+        background-image: url("assets/photos/pb-left-1.png");
+      }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
+      .frame-right {
+        top: 0;
+        right: -10px;
+        width: 50px;
+        height: 100%;
+        background-image: url("assets/photos/pb-right-1.png");
+      }
 
-    th, td {
-      border: 1px solid #33ff33;
-      padding: 0.5rem;
-      text-align: left;
-    }
+      .frame-top {
+        top: -10px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-image: url("assets/photos/pb-top-1.png");
+      }
 
-    th {
-      background-color: #003300;
-    }
+      .frame-bottom {
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-image: url("assets/photos/pb-bottom-1.png");
+      } */
+      /* 
+      @media (max-width: 768px) {
+        .frame-left,
+        .frame-right,
+        .frame-top,
+        .frame-bottom {
+          display: none;
+        }
 
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 4px #33ff33;
-    }
+        .container {
+          overflow-y: scroll;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="frame-left"></div>
+    <div class="frame-right"></div>
+    <div class="frame-top"></div>
+    <div class="frame-bottom"></div>
 
-    p {
-      margin-bottom: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="top-header-bar">
-    <div class="campaign-title">Rise from the Forge</div>
-    <div class="discord-link">
-      <a href="https://discord.gg/" target="_blank">
-        <img src="assets/discord-icon.png" alt="Discord"> Join Discord
-      </a>
+    <div class="container">
+      <nav id="nav"></nav>
+      <div class="content-area scrollbar" id="carousel"></div>
     </div>
-  </div>
 
-  <div class="frame-left"></div>
-  <div class="frame-right"></div>
+    <script>
+      const sections = [
+        // {
+        //   title: "RIVAL BOARD",
+        //   content:
+        //     "<div class='context-image'></div><h2>Rival Board</h2><p>This section tracks factions that oppose the players...</p>",
+        // },
+        // {
+        //   title: "CREW BOARD",
+        //   content:
+        //     "<div class='context-image'></div><h2>Crew Board</h2><p>Track your team, roles, and missions here...</p>",
+        // },
+        {
+          title: "LEGENDS OF THE WASTELAND",
+          content: `<div class='context-image'></div>
+            <h2>Legends of the Wasteland</h2>
+            <p>Available Legends of the Wasteland</p>
+            <table class="green-table">
+              <thead>
+                <tr>
+                  <th>Legend Name</th>
+                  <th>Status</th>
+                  <th>Player</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>The Ghoul</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Lucy</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Maximus</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>Mason</td>
+                  <td>Alive</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </t
+        }`,
+        },
+        {
+          title: "HOUSE RULES",
+          content:
+            "<div class='context-image'></div><h2>House Rules</h2><p>Custom gameplay tweaks for your campaign...</p>",
+        },
+        {
+          title: "ASCENSION ABILITIES",
+          content:
+            "<div class='context-image'></div><h2>Ascension Abilities</h2><p>High-level perks and character evolution options...</p>",
+        },
+        // {
+        //   title: "BATTLE REPORTS",
+        //   content:
+        //     "<div class='context-image'></div><h2>Battle Reports</h2><p>Summaries of past encounters and key outcomes...</p>",
+        // },
+        // {
+        //   title: "PHOTOS",
+        //   content:
+        //     "<div class='context-image'></div><h2>Photos</h2><p>Captured moments from the Wasteland...</p>",
+        // },
+        // {
+        //   title: "CHAT",
+        //   content:
+        //     "<div class='context-image'></div><h2>Chat</h2><p>In-character messages or player banter here...</p>",
+        // },
+        // {
+        //   title: "INVITING PLAYERS",
+        //   content:
+        //     "<div class='context-image'></div><h2>Inviting Players</h2><p>Guidance for bringing new people into the game...</p>",
+        // },
+      ];
 
-  <div class="container">
-    <nav id="nav"></nav>
-    <div class="content-area scrollbar" id="carousel"></div>
-  </div>
+      const nav = document.getElementById("nav");
+      const carousel = document.getElementById("carousel");
 
-  <script>
-    const sections = [];
+      sections.forEach((section, i) => {
+        const btn = document.createElement("button");
+        btn.textContent = section.title;
+        btn.onclick = () => setActive(i);
+        nav.appendChild(btn);
 
-    document.querySelectorAll('#carousel .carousel-section').forEach((el, i) => {
-      sections.push({
-        title: el.getAttribute('data-title') || `Section ${i+1}`,
-        content: el.innerHTML
+        const div = document.createElement("div");
+        div.className = "carousel-section";
+        div.innerHTML = section.content;
+        carousel.appendChild(div);
       });
-    });
 
-    const nav = document.getElementById('nav');
-    const carousel = document.getElementById('carousel');
+      function setActive(index) {
+        document.querySelectorAll(".carousel-section").forEach((el, i) => {
+          el.classList.toggle("active", i === index);
+        });
+      }
 
-    carousel.innerHTML = '';
-
-    sections.forEach((section, i) => {
-      const btn = document.createElement('button');
-      btn.textContent = section.title;
-      btn.onclick = () => setActive(i);
-      nav.appendChild(btn);
-
-      const div = document.createElement('div');
-      div.className = 'carousel-section';
-      div.innerHTML = section.content;
-      carousel.appendChild(div);
-    });
-
-    function setActive(index) {
-      document.querySelectorAll('.carousel-section').forEach((el, i) => {
-        el.classList.toggle('active', i === index);
-      });
-
-      document.querySelectorAll('nav button').forEach((btn, i) => {
-        btn.classList.toggle('active-btn', i === index);
-      });
-    }
-
-    setActive(0);
-  </script>
-</body>
+      // Show first section by default
+      setActive(0);
+    </script>
+  </body>
 </html>
