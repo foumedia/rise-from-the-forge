@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+strong {
+  color: rgb(51, 255, 51, 0.9);
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -192,4 +196,26 @@ a:hover {
 .terminal-warning ul {
   list-style-type: none; /* Remove bullets */
   padding-left: 0; /* Remove left padding */
+}
+
+.flicker-effect {
+  animation: pipboy-flicker 0.6s ease-in-out;
+}
+
+@keyframes pipboy-flicker {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
