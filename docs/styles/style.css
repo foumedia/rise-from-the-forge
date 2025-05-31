@@ -82,6 +82,16 @@ nav button.active {
     text-align: center; /* Center text inside buttons */
     font-size: 1.4rem;
   }
+
+  .green-table-header,
+  .green-table-row {
+    flex-direction: column; /* Stack rows vertically */
+    text-align: left; /* Align text to the left */
+  }
+
+  .green-table div {
+    margin-bottom: 0.5rem; /* Add spacing between stacked items */
+  }
 }
 
 .content-area {
