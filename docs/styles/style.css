@@ -254,3 +254,30 @@ a:hover {
   padding: 1rem;
   box-sizing: border-box;
 }
+
+.terminal-warning-flex {
+  display: flex;
+  align-items: center;
+  justify-content;
+  gap: 2rem;
+}
+
+.terminal-warning-flex ul {
+margin-left: 20px;}
+
+.terminal-warning-flex img {
+  flex-shrink: 0;
+  max-width: 200px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .terminal-warning-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .terminal-warning-flex img {
+    align-self: center;
+  }
+}
