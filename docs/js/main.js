@@ -3,6 +3,8 @@ const sections = [
   { title: "LEGENDS", file: "./sections/legends.html" },
   { title: "RULES", file: "./sections/rules.html" },
   { title: "ASCENSION", file: "./sections/ascension.html" },
+  { title: "PRIZES", file: "./sections/giveaways.html" },
+
 ];
 
 const nav = document.getElementById("nav");
