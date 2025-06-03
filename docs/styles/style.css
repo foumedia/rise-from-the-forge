@@ -254,11 +254,17 @@ a:hover {
   padding: 1rem;
   box-sizing: border-box;
 }
+ 
+.stacked-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
 .terminal-warning-flex {
   display: flex;
   align-items: center;
-  justify-content;
   gap: 2rem;
 }
 
