@@ -97,7 +97,7 @@ function renderLegendDetails(legendKey, afterRow) {
         <div class="legend-details-label">SPECIAL ♥</div>
         <div class="legend-details-value">
           <div class="special-flex-header">
-            ${['S','P','E','C','I','A','L','♥'].map(l => `<span class="special-col">${l}</span>`).join('')}
+            ${['S', 'P', 'E', 'C', 'I', 'A', 'L', '♥'].map(l => `<span class="special-col">${l}</span>`).join('')}
           </div>
           <div class="special-flex-values">
             ${data.special.map(val => `<span class="special-col-value">${val}</span>`).join('')}
@@ -125,14 +125,20 @@ function renderLegendDetails(legendKey, afterRow) {
 }
 
 function bindLegendRowEvents(scope) {
-  (scope || document).querySelectorAll('.legend-clickable').forEach(function(row) {
-    row.addEventListener('click', function() {
-      // Remove any existing details row
-      document.querySelectorAll('.legend-details-row.dynamic').forEach(el => el.remove());
+  (scope || document).querySelectorAll('.legend-clickable').forEach(function (row) {
+    row.addEventListener('click', function () {
+
+      // If details are already showing for this row, hide them
+      const next = row.nextElementSibling;
+      if (next && next.classList.contains('legend-details-row') && next.classList.contains('dynamic')) {
+        next.remove();
+        return;
+      }
+      // Otherwise, remove any other details and show this one      document.querySelectorAll('.legend-details-row.dynamic').forEach(el => el.remove());
       var legend = row.getAttribute('data-legend');
       renderLegendDetails(legend, row);
     });
-    row.addEventListener('touchstart', function(e) {
+    row.addEventListener('touchstart', function (e) {
       e.preventDefault();
       row.click();
     });
