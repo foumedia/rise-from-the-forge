@@ -66,12 +66,12 @@
       "Nuka-nuke Launcher: Heavy (20\") | 5S Area (2”), CQB, Irradiate, One & Done"
     ],
     "perks": [
-      "• Iron Fist (Strength)",
-      "• King of the Castle (Innate)",
-      "• Natural Leader (Innate)",
-      "• Power Armor (Innate)",
-      "King of the Castle: This model's crew may use the Nuka-nuke Launcher Ploy. In addition, this model's crew may use the Faction Ploys for The Pack, Operators and Disciples from the Fallout: Factions - Battle for Nuka-World Starter Set.",
-      "Ploy: Nuka-nuke Launcher: You may enact this Ploy at the end of any Round if a Friendly King of the Park in on the Battlefield, and not Incapacitated. A Friendly King of the Park model makes a Ranged Attack Action using the Nuka-nuke Launcher Weapon."
+      "★ Iron Fist (Strength)",
+      "★ King of the Castle (Innate)",
+      "★ Natural Leader (Innate)",
+      "★ Power Armor (Innate)",
+      "★ King of the Castle: This model's crew may use the Nuka-nuke Launcher Ploy. In addition, this model's crew may use the Faction Ploys for The Pack, Operators and Disciples from the Fallout: Factions - Battle for Nuka-World Starter Set.",
+      "★ Ploy: Nuka-nuke Launcher: You may enact this Ploy at the end of any Round if a Friendly King of the Park in on the Battlefield, and not Incapacitated. A Friendly King of the Park model makes a Ranged Attack Action using the Nuka-nuke Launcher Weapon."
     ]
   },
   "bottle-and-cappy": {
@@ -82,12 +82,12 @@
       "Bladed Commie Whacker: Melee | 2S Fast Pierce"
     ],
     "perks": [
-      "• Every Minimum Acceptable Safety Standard Met (Innate)",
-      "• Four Leaf Clover (Luck)",
-      "• Hidden (Agility)",
-      "• Zip of Nuka-Cola (Innate)",
-      "Every Minimum Acceptable Safety Standard Met: This model has no Harm Limit.",
-      "Zip of Nuka-Cola: When this model would be Incapacitated, if a crew has a model within 2” of this model, they add a dose of Nuka-Cola to their Crew Roster."
+      "★ Every Minimum Acceptable Safety Standard Met (Innate)",
+      "★ Four Leaf Clover (Luck)",
+      "★ Hidden (Agility)",
+      "★ Zip of Nuka-Cola (Innate)",
+      "★ Every Minimum Acceptable Safety Standard Met: This model has no Harm Limit.",
+      "★ Zip of Nuka-Cola: When this model would be Incapacitated, if a crew has a model within 2” of this model, they add a dose of Nuka-Cola to their Crew Roster."
     ]
   },
   "redeye": {
@@ -97,10 +97,10 @@
       "The Real Deal: Melee | 4S Fast Maim"
     ],
     "perks": [
-      "• Inspirational (Charisma)",
-      "• Intimidation (Charisma)",
-      "• Recruiter (Innate)",
-      "Recruiter: If at the end of a game, this model was not Incapacitated, its crew may make the Recruit Story Action once for free during the next Story Phase."
+      "★ Inspirational (Charisma)",
+      "★ Intimidation (Charisma)",
+      "★ Recruiter (Innate)",
+      "★ Recruiter: If at the end of a game, this model was not Incapacitated, its crew may make the Recruit Story Action once for free during the next Story Phase."
     ]
   },
   "mason": {
@@ -110,10 +110,10 @@
       "Heavy Combat Shotgun: Rifle (10\") | 5P Fast, Storm (1) Maim"
     ],
     "perks": [
-      "• Inspirational (Intelligence)",
-      "• Natural Leader (Innate)",
-      "• Survivalist (Innate)",
-      "• Toughness (Endurance)"
+      "★ Inspirational (Intelligence)",
+      "★ Natural Leader (Innate)",
+      "★ Survivalist (Innate)",
+      "★ Toughness (Endurance)"
     ]
   },
   "mags-black": {
@@ -123,10 +123,10 @@
       "Suppressing Handmade Rifle: Rifle (22\") | 4P Fast Suppress (3)"
     ],
     "perks": [
-      "• Making a Withdrawal (Innate)",
-      "• Natural Leader (Innate)",
-      "• Rifleman (Perception)",
-      "Making a Withdrawal: When this model would cause an Enemy model to suffer an Injury or Harm, the opposing player may reduce their Stash by 5 Caps per Injury and Harm. For every 5 Caps removed, this model’s crew gains 5 Caps and the Enemy model suffers one less Injury or Harm, as appropriate."
+      "★ Making a Withdrawal (Innate)",
+      "★ Natural Leader (Innate)",
+      "★ Rifleman (Perception)",
+      "★ Making a Withdrawal: When this model would cause an Enemy model to suffer an Injury or Harm, the opposing player may reduce their Stash by 5 Caps per Injury and Harm. For every 5 Caps removed, this model’s crew gains 5 Caps and the Enemy model suffers one less Injury or Harm, as appropriate."
     ]
   },
   "nisha": {
@@ -137,10 +137,10 @@
       "Plasma Pistol: Pistol (12\") | 4A CQB, Fast Meltdown"
     ],
     "perks": [
-      "• Blitz (Agility)",
-      "• One Rule (Innate)",
-      "• Natural Leader (Innate)",
-      "One Rule: All Friendly models within this model’s Control Area have the Blitz Perk."
+      "★ Blitz (Agility)",
+      "★ One Rule (Innate)",
+      "★ Natural Leader (Innate)",
+      "★ One Rule: All Friendly models within this model’s Control Area have the Blitz Perk."
     ]
   },
   "overboss-colter": {
@@ -151,10 +151,10 @@
       "Iron Fist: Melee | 5S Fast Maim"
     ],
     "perks": [
-      "• Cheater (Innate)",
-      "• Natural Leader (Innate)",
-      "• Power Armor (Innate)",
-      "Cheater: This model can make the Get Moving, Open Fire, Patch Up, and Rummage Actions while it is Engaged."
+      "★ Cheater (Innate)",
+      "★ Natural Leader (Innate)",
+      "★ Power Armor (Innate)",
+      "★ Cheater: This model can make the Get Moving, Open Fire, Patch Up, and Rummage Actions while it is Engaged."
     ]
   },
   "nick-valentine": {
@@ -164,9 +164,9 @@
       "Pipe Revolver: Pistol (12\") | 3A Aim (+1), CQB Pierce"
     ],
     "perks": [
-      "• Adaptable (Intelligence)",
-      "• Informant (Intelligence)",
-      "• Rad Resistant (Endurance)"
+      "★ Adaptable (Intelligence)",
+      "★ Informant (Intelligence)",
+      "★ Rad Resistant (Endurance)"
     ]
   },
   "fist": {
@@ -176,11 +176,11 @@
       "Minigun: Heavy (14\") | 4S Slow, Storm (3) Pierce"
     ],
     "perks": [
-      "• Burly (Innate)",
-      "• Natural Leader (Innate)",
-      "• Rad Resistant (Endurance)",
-      "• Toughness (Endurance)",
-      "• Unending Stamina (Endurance)"
+      "★ Burly (Innate)",
+      "★ Natural Leader (Innate)",
+      "★ Rad Resistant (Endurance)",
+      "★ Toughness (Endurance)",
+      "★ Unending Stamina (Endurance)"
     ]
   },
   "paladin-danse": {
@@ -190,10 +190,10 @@
       "Laser Rifle: Rifle (18\") | 4P Ignite (1)"
     ],
     "perks": [
-      "• Know Your Enemy (Super Mutants) (Innate)",
-      "• Natural Leader (Innate)",
-      "• Odd Anatomy (Endurance)",
-      "• Power Armor (Innate)"
+      "★ Know Your Enemy (Super Mutants) (Innate)",
+      "★ Natural Leader (Innate)",
+      "★ Odd Anatomy (Endurance)",
+      "★ Power Armor (Innate)"
     ]
   }
 }

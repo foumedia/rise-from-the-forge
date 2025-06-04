@@ -85,3 +85,26 @@
   cursor: pointer;
   transition: background 0.5s;
 }
+
+@media (max-width: 768px) {
+  .legend-details-flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .legend-details-row-flex {
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+  }
+  .legend-details-label {
+    text-align: left;
+    padding-right: 0;
+    min-width: unset;
+    max-width: unset;
+    margin-bottom: 0.1em;
+  }
+  .legend-details-value {
+    width: 100%;
+    text-align: left;
+  }
+}
