@@ -1,0 +1,73 @@
+.green-table {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  color: rgb(51, 255, 51, 1);
+  background-color: #050e04;
+  font-size: 1.2rem;
+}
+
+.green-table-header,
+.green-table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  line-height: 1.2;
+}
+
+.green-table-header {
+  font-weight: bold;
+  background-color: rgb(51, 255, 51, 0.6);
+  color: #050e04;
+}
+
+.green-table-row:nth-child(even) {
+  background-color: #050e04;
+}
+
+.green-table-row:hover {
+  background-color: rgb(51, 255, 51, 1);
+  color: #121212;
+}
+
+.green-table div {
+  flex: 1;
+  text-align: left;
+}
+
+.green-table-category-row {
+  text-align: center !important;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(51, 255, 51, 1);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: rgb(51, 255, 51, 1);
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgb(51, 255, 51, 1);
+  margin: 0.5rem;
+  flex: 1 1 auto;
+}
+
+nav button.active {
+  background-color: rgb(51, 255, 51, 1);
+  color: #050e04;
+}
+
+@media (max-width: 768px) {
+  .green-table-row {
+    line-height: 0.8;
+  }
+}

@@ -1,0 +1,47 @@
+body {
+  background: #050e04;
+  color: rgb(51, 255, 51, 1);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+strong {
+  color: rgb(51, 255, 51, 0.9);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050e04;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(51, 255, 51, 1);
+  border: 2px solid #050e04;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #66ff66;
+}
+
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffa500;
+  text-decoration: underline;
+}
+
+p {
+  color: rgb(51, 255, 51, 0.6);
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: rgb(51, 255, 51, 0.9);
+}
