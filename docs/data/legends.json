@@ -112,9 +112,9 @@
         ],
         "perks": [
             "★ Iron Fist (Strength)",
-            "★ King of the Castle (Innate)",
             "★ Natural Leader (Innate)",
             "★ Power Armor (Innate)",
+            "★ King of the Castle (Innate)",
             "★ King of the Castle: This model's crew may use the Nuka-nuke Launcher Ploy. In addition, this model's crew may use the Faction Ploys for The Pack, Operators and Disciples from the Fallout: Factions - Battle for Nuka-World Starter Set.",
             "★ Ploy: Nuka-nuke Launcher: You may enact this Ploy at the end of any Round if a Friendly King of the Park in on the Battlefield, and not Incapacitated. A Friendly King of the Park model makes a Ranged Attack Action using the Nuka-nuke Launcher Weapon."
         ]
@@ -331,7 +331,8 @@
             6,
             5,
             5,
-            3
+            3,
+            4
         ],
         "weapon": [
             "Blade of the East: Melee | 5S, Pierce, Maim, Pushback(2), Unwieldy(6)",
@@ -340,6 +341,7 @@
         "perks": [
             "★ Burly",
             "★ Hardy",
+            "★ Lifegiver",
             "★ Charge",
             "★ Wide Swings"
         ]
