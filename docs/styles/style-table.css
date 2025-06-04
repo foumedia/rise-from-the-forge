@@ -68,6 +68,6 @@ nav button.active {
 
 @media (max-width: 768px) {
   .green-table-row {
-    line-height: 0.8;
+    line-height: 1;
   }
 }
