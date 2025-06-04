@@ -58,6 +58,8 @@ function loadSectionContent(file, element) {
     })
     .then((html) => {
       element.innerHTML = html;
+    })
+    .finally((html) => {
       if (file.includes('legends.html')) {
         loadLegendDetailsJson().then(() => {
           bindLegendRowEvents(element);
@@ -125,23 +127,29 @@ function renderLegendDetails(legendKey, afterRow) {
 }
 
 function bindLegendRowEvents(scope) {
-  (scope || document).querySelectorAll('.legend-clickable').forEach(function (row) {
-    row.addEventListener('click', function () {
+  (scope || document).querySelectorAll('.legend-clickable').forEach(function(row) {
+    // Remove previous listeners by using named handlers
+    row.removeEventListener('click', row._legendClickHandler);
+    row.removeEventListener('touchstart', row._legendTouchHandler);
 
-      // If details are already showing for this row, hide them
+    // Define named handlers so we can remove them later
+    row._legendClickHandler = function () {
       const next = row.nextElementSibling;
       if (next && next.classList.contains('legend-details-row') && next.classList.contains('dynamic')) {
         next.remove();
         return;
       }
-      // Otherwise, remove any other details and show this one      document.querySelectorAll('.legend-details-row.dynamic').forEach(el => el.remove());
+      document.querySelectorAll('.legend-details-row.dynamic').forEach(el => el.remove());
       var legend = row.getAttribute('data-legend');
       renderLegendDetails(legend, row);
-    });
-    row.addEventListener('touchstart', function (e) {
+    };
+    row._legendTouchHandler = function (e) {
       e.preventDefault();
-      row.click();
-    });
+      row._legendClickHandler();
+    };
+
+    row.addEventListener('click', row._legendClickHandler);
+    row.addEventListener('touchstart', row._legendTouchHandler);
   });
 }
 
