@@ -1,9 +1,10 @@
 const sections = [
   { title: "INTRO", file: "./sections/intro.html" },
-  { title: "LEGENDS", file: "./sections/legends.html" },
-  { title: "RULES", file: "./sections/rules.html" },
-  { title: "ASCENSION", file: "./sections/ascension.html" },
   { title: "PRIZES", file: "./sections/giveaways.html" },
+  { title: "RULES", file: "./sections/rules.html" },
+  { title: "LEGENDS", file: "./sections/legends.html" },
+  { title: "BOUNTIES", file: "./sections/bounties.html" },
+  { title: "ASCENSION", file: "./sections/ascension.html" },
 
 ];
 
