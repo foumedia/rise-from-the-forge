@@ -1,0 +1,61 @@
+{
+  "the-ghoul": {
+    "description": "Also known as Cooper Howard, The Ghoul was a Vault-Tec spokesman and the lead actor in the box office smash ‘The Man From Deadhorse.’ His days on the silver screen (and most of his skin) long gone, Howard now trades in bullets as a bounty hunter.",
+    "special": [4,6,6,5,4,6,3,3],
+    "weapon": [
+      "The Ghoul’s Pistol: Pistol (8\") | 5A CQB Maim",
+      "The Ghoul’s Rifle: Rifle (18\") | 5P Fast"
+    ],
+    "perks": [
+      "★ Bloody Mess (Luck)",
+      "★ Fire and Move (Agility)",
+      "★ Improvised Lasso (Innate)",
+      "★ Rad Resistant (Endurance)",
+      "★ The One and Only (Innate)",
+      "★ Wasteland Wanderer (Innate)"
+    ]
+  },
+  "lucy": {
+    "description": "A resident of Vault 33, Lucy lived a comfortable life underground with her brother Norm and her father (Vault Overseer), Hank. Events have come together in such a way to force the naive Lucy out into the violent world beyond the Vault.",
+    "special": [4,5,4,4,5,5,3,2],
+    "weapon": [
+      "Tranquilizer Pistol: Pistol (10\") | 3A CQB, Tranquilize"
+    ],
+    "perks": [
+      "★ The One and Only (Innate)",
+      "★ Okey Dokey (Innate)",
+      "★ Wasteland Wanderer (Innate)"
+    ]
+  },
+  "maximus": {
+    "description": "Determined and bound by sacred duty Maximus is a recently promoted Squire to Knight Titus. He knows what an honor it is to wear the armor of the Brotherhood of Steel, an honor he takes upon himself as he assumes the identity of His Lord Knight Titus after their untimely death.",
+    "special": [6,4,6,4,4,4,2,2],
+    "weapon": [
+      "Heavy Assault Rifle: Rifle (20\") | 5P Storm (1)",
+      "Power Armor Punch: Melee | 4S"
+    ],
+    "perks": [
+      "★ Rule No.1: Read The Manual (Innate)",
+      "★ Burly (Innate)",
+      "★ Hardy (Innate)",
+      "★ Rad Resistant (Endurance)",
+      "★ The One and Only (Innate)",
+      "★ Wasteland Wanderer (Innate)"
+    ]
+  },
+  "cx404": {
+    "description": "Some things don’t change in the Wasteland. Dogs are still man’s best friend, able to keep you company and safe from Raiders in equal measure. They even feed themselves, for the most part.",
+    "special": [4,4,4,3,4,4,2,2],
+    "weapon": [
+      "Claws and Jaws: Melee | 4S"
+    ],
+    "perks": [
+      "★ Beast (Innate)",
+      "★ Fast",
+      "★ Scrapper (Intelligence)",
+      "★ Sic ’Em (Innate)",
+      "★ The One and Only (Innate)",
+      "★ Wasteland Wanderer (Innate)"
+    ]
+  }
+}

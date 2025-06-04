@@ -190,11 +190,11 @@ p {
   background-color: #050e04;
 }
 
+/* Only highlight on hover, not by default */
 .green-table-row:hover {
   background-color: rgb(51, 255, 51, 1);
   color: #121212;
 }
-
 .green-table div {
   flex: 1;
   text-align: left;
@@ -263,7 +263,7 @@ a:hover {
   padding: 1rem;
   box-sizing: border-box;
 }
- 
+
 .stacked-layout {
   display: flex;
   flex-direction: column;
@@ -278,7 +278,8 @@ a:hover {
 }
 
 .terminal-warning-flex ul {
-margin-left: 20px;}
+  margin-left: 20px;
+}
 
 .terminal-warning-flex img {
   flex-shrink: 0;
@@ -295,4 +296,107 @@ margin-left: 20px;}
   .terminal-warning-flex img {
     align-self: center;
   }
+}
+
+.legend-details-row {
+  display: none;
+  background: #050e04;
+  color: rgb(51, 255, 51, 1);
+  width: 100%;
+  padding: 0.5rem;
+  border-top: 1px solid rgb(51, 255, 51, 0.2);
+  border-bottom: 1px solid rgb(51, 255, 51, 0.2);
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  /* Match flex layout of green-table-row */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.legend-details-row:not(.active) {
+  display: none;
+}
+
+.legend-details-row.active {
+  display: flex;
+}
+
+.legend-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  background: #050e04;
+  color: rgb(51, 255, 51, 1);
+}
+
+.legend-details-table td,
+.legend-details-table th {
+  border: 1px solid #446644;
+  padding: 0.3em 0.6em;
+}
+
+.legend-clickable {
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.legend-details-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.legend-details-row-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.legend-details-label {
+  min-width: 110px;
+  max-width: 140px;
+  font-weight: bold;
+  color: rgb(51, 255, 51, 1);
+  flex-shrink: 0;
+  padding-right: 0.5em;
+  text-align: right;
+}
+
+.legend-details-value {
+  flex: 1 1 0;
+  color: rgb(51, 255, 51, 1);
+  word-break: break-word;
+}
+
+.special-flex-header,
+.special-flex-values {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
+}
+
+.special-col,
+.special-col-value {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(51, 255, 51, 1);
+  background: transparent;
+  border: none;
+  padding: 0.2em 0;
+  box-sizing: border-box;
+}
+
+.special-col-value {
+  font-weight: normal;
+  flex-shrink: 0;
 }

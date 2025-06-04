@@ -58,11 +58,85 @@ function loadSectionContent(file, element) {
     })
     .then((html) => {
       element.innerHTML = html;
+      if (file.includes('legends.html')) {
+        loadLegendDetailsJson().then(() => {
+          bindLegendRowEvents(element);
+        });
+      }
     })
     .catch((error) => {
       console.error(`Error loading ${file}: ${error.message}`);
       element.innerHTML = `<p>Error loading content. Please try again later.</p>`;
     });
+}
+
+let legendDetailsData = {};
+
+function loadLegendDetailsJson() {
+  return fetch('./data/legends.json')
+    .then(res => res.json())
+    .then(json => { legendDetailsData = json; });
+}
+
+function renderLegendDetails(legendKey, afterRow) {
+  // Remove any existing details row
+  document.querySelectorAll('.legend-details-row.dynamic').forEach(el => el.remove());
+  const data = legendDetailsData[legendKey];
+  if (!data) return;
+
+  // Build the details flexbox structure
+  const flex = document.createElement('div');
+  flex.className = 'legend-details-row active dynamic';
+  flex.innerHTML = `
+    <div class="legend-details-flex">
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Description</div>
+        <div class="legend-details-value">${data.description}</div>
+      </div>
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">SPECIAL ♥</div>
+        <div class="legend-details-value">
+          <div class="special-flex-header">
+            ${['S','P','E','C','I','A','L','♥'].map(l => `<span class="special-col">${l}</span>`).join('')}
+          </div>
+          <div class="special-flex-values">
+            ${data.special.map(val => `<span class="special-col-value">${val}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Weapon</div>
+        <div class="legend-details-value">
+          ${Array.isArray(data.weapon) ? data.weapon.map(w => `${w}`).join('<br>') : data.weapon}
+        </div>
+      </div>
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Perks</div>
+        <div class="legend-details-value">
+          ${Array.isArray(data.perks) ? data.perks.map(p => `${p}`).join('<br>') : data.perks}
+        </div>
+      </div>
+    </div>
+  `;
+  // Insert after the clicked row
+  if (afterRow && afterRow.parentNode) {
+    afterRow.parentNode.insertBefore(flex, afterRow.nextSibling);
+  }
+}
+
+function bindLegendRowEvents(scope) {
+  (scope || document).querySelectorAll('.legend-clickable').forEach(function(row) {
+    row.addEventListener('click', function() {
+      // Remove any existing details row
+      document.querySelectorAll('.legend-details-row.dynamic').forEach(el => el.remove());
+      var legend = row.getAttribute('data-legend');
+      renderLegendDetails(legend, row);
+    });
+    row.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      row.click();
+    });
+  });
 }
 
 function handleHashChange() {
