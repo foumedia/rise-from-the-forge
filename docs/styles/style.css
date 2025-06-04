@@ -58,7 +58,7 @@ nav button {
   background: none;
   border: none;
   color: rgb(51, 255, 51, 1);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
   text-shadow: 0 0 5px rgb(51, 255, 51, 1);
@@ -170,7 +170,7 @@ p {
   margin-top: 1rem;
   color: rgb(51, 255, 51, 1);
   background-color: #050e04;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .green-table-header,
