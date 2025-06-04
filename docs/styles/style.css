@@ -77,10 +77,19 @@ nav button.active {
     align-items: center; /* Center buttons */
   }
 
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for nav buttons */
+    gap: 0.5rem;
+    width: 100%;
+  }
+
   nav button {
-    width: 100%; /* Make buttons take full width */
+    width: 100%; /* Make buttons take full width of grid cell */
     text-align: center; /* Center text inside buttons */
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    margin: 0; /* Remove margin for grid layout */
+    flex: unset; /* Remove flex for grid layout */
   }
 
   .green-table-header,
