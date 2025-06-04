@@ -1,199 +1,347 @@
 {
-  "the-ghoul": {
-    "description": "Also known as Cooper Howard, The Ghoul was a Vault-Tec spokesman and the lead actor in the box office smash ‘The Man From Deadhorse.’ His days on the silver screen (and most of his skin) long gone, Howard now trades in bullets as a bounty hunter.",
-    "special": [4,6,6,5,4,6,3,3],
-    "weapon": [
-      "The Ghoul’s Pistol: Pistol (8\") | 5A CQB Maim",
-      "The Ghoul’s Rifle: Rifle (18\") | 5P Fast"
-    ],
-    "perks": [
-      "★ Bloody Mess (Luck)",
-      "★ Fire and Move (Agility)",
-      "★ Improvised Lasso (Innate)",
-      "★ Rad Resistant (Endurance)",
-      "★ The One and Only (Innate)",
-      "★ Wasteland Wanderer (Innate)"
-    ]
-  },
-  "lucy": {
-    "description": "A resident of Vault 33, Lucy lived a comfortable life underground with her brother Norm and her father (Vault Overseer), Hank. Events have come together in such a way to force the naive Lucy out into the violent world beyond the Vault.",
-    "special": [4,5,4,4,5,5,3,2],
-    "weapon": [
-      "Tranquilizer Pistol: Pistol (10\") | 3A CQB, Tranquilize"
-    ],
-    "perks": [
-      "★ The One and Only (Innate)",
-      "★ Okey Dokey (Innate)",
-      "★ Wasteland Wanderer (Innate)"
-    ]
-  },
-  "maximus": {
-    "description": "Determined and bound by sacred duty Maximus is a recently promoted Squire to Knight Titus. He knows what an honor it is to wear the armor of the Brotherhood of Steel, an honor he takes upon himself as he assumes the identity of His Lord Knight Titus after their untimely death.",
-    "special": [6,4,6,4,4,4,2,2],
-    "weapon": [
-      "Heavy Assault Rifle: Rifle (20\") | 5P Storm (1)",
-      "Power Armor Punch: Melee | 4S"
-    ],
-    "perks": [
-      "★ Rule No.1: Read The Manual (Innate)",
-      "★ Burly (Innate)",
-      "★ Hardy (Innate)",
-      "★ Rad Resistant (Endurance)",
-      "★ The One and Only (Innate)",
-      "★ Wasteland Wanderer (Innate)"
-    ]
-  },
-  "cx404": {
-    "description": "Some things don’t change in the Wasteland. Dogs are still man’s best friend, able to keep you company and safe from Raiders in equal measure. They even feed themselves, for the most part.",
-    "special": [4,4,4,3,4,4,2,2],
-    "weapon": [
-      "Claws and Jaws: Melee | 4S"
-    ],
-    "perks": [
-      "★ Beast (Innate)",
-      "★ Fast",
-      "★ Scrapper (Intelligence)",
-      "★ Sic ’Em (Innate)",
-      "★ The One and Only (Innate)",
-      "★ Wasteland Wanderer (Innate)"
-    ]
-  },
-  "king-of-the-park": {
-    "description": "“Nuka-World is under new management. This Wastelander took on the Gauntlet like it was a ride at Kiddie Kingdom. They got all us gangs to stop arguing, re-took the Park and — to top it all off — they found this hella strong gun from someplace. The Commonwealth better get ready because they’re next!”",
-    "special": [7,5,7,6,5,5,3,4],
-    "weapon": [
-      "Iron Fist: Melee | 5S Fast Maim",
-      "Nuka-nuke Launcher: Heavy (20\") | 5S Area (2”), CQB, Irradiate, One & Done"
-    ],
-    "perks": [
-      "★ Iron Fist (Strength)",
-      "★ King of the Castle (Innate)",
-      "★ Natural Leader (Innate)",
-      "★ Power Armor (Innate)",
-      "★ King of the Castle: This model's crew may use the Nuka-nuke Launcher Ploy. In addition, this model's crew may use the Faction Ploys for The Pack, Operators and Disciples from the Fallout: Factions - Battle for Nuka-World Starter Set.",
-      "★ Ploy: Nuka-nuke Launcher: You may enact this Ploy at the end of any Round if a Friendly King of the Park in on the Battlefield, and not Incapacitated. A Friendly King of the Park model makes a Ranged Attack Action using the Nuka-nuke Launcher Weapon."
-    ]
-  },
-  "bottle-and-cappy": {
-    "description": "Bottle: What is this, Cappy? Cappy: It’s our Profile, Bottle! We’re special named characters that players of Fallout: Factions can add to their crews to give them that extra bit of Nuka-Cola-like zip on the Battlefield! Bottle: Ba… Battlefield, Cappy? I don’t think I want to fight anyone… Cappy: Get it together, Bottle! Those crews need us. Just stay alert and you’ll be just fine!",
-    "special": [4,4,4,6,5,4,4,2],
-    "weapon": [
-      "Splattercannon: Rifle (22\") | 5P Fast Suppress (3)",
-      "Bladed Commie Whacker: Melee | 2S Fast Pierce"
-    ],
-    "perks": [
-      "★ Every Minimum Acceptable Safety Standard Met (Innate)",
-      "★ Four Leaf Clover (Luck)",
-      "★ Hidden (Agility)",
-      "★ Zip of Nuka-Cola (Innate)",
-      "★ Every Minimum Acceptable Safety Standard Met: This model has no Harm Limit.",
-      "★ Zip of Nuka-Cola: When this model would be Incapacitated, if a crew has a model within 2” of this model, they add a dose of Nuka-Cola to their Crew Roster."
-    ]
-  },
-  "redeye": {
-    "description": "“Listen. Shut up. It’s your main man, RedEye! I’m the one and only host of Raider Radio and let me tell you, I can scrap with the best of them. In fact, the only thing I do better than toasting a Waster like you is shredding tunes on my guitar here! I could’ve run the show at Nuka-World but then, you know, we’d have it far too easy and where’d be the fun in that? Anyway, did I tell you about the time I…”",
-    "special": [5,5,4,6,5,5,2,2],
-    "weapon": [
-      "The Real Deal: Melee | 4S Fast Maim"
-    ],
-    "perks": [
-      "★ Inspirational (Charisma)",
-      "★ Intimidation (Charisma)",
-      "★ Recruiter (Innate)",
-      "★ Recruiter: If at the end of a game, this model was not Incapacitated, its crew may make the Recruit Story Action once for free during the next Story Phase."
-    ]
-  },
-  "mason": {
-    "description": "Mason makes himself known on the battlefield. Boisterous, loud, and brightly colored, the Pack’s Alpha is a leader to be feared. It is said Mason tarred and feathered the prior Alphas to establish his rule over the animalistic Raider gang. He believes that staying in charge is down to following the rules when you have to and breaking them when you can get away with it.",
-    "special": [5,5,5,6,6,5,3,3],
-    "weapon": [
-      "Heavy Combat Shotgun: Rifle (10\") | 5P Fast, Storm (1) Maim"
-    ],
-    "perks": [
-      "★ Inspirational (Intelligence)",
-      "★ Natural Leader (Innate)",
-      "★ Survivalist (Innate)",
-      "★ Toughness (Endurance)"
-    ]
-  },
-  "mags-black": {
-    "description": "Mags Black and the other heads of the Operators used to live the high life in the upper tiers of society in Diamond City. They found themselves exiled from the shining jewel of the Commonwealth, before setting up shop in the Parlor in Nuka-World. From there, Mags makes sure the caps keep streaming in. And business is booming.",
-    "special": [5,6,5,5,6,5,2,3],
-    "weapon": [
-      "Suppressing Handmade Rifle: Rifle (22\") | 4P Fast Suppress (3)"
-    ],
-    "perks": [
-      "★ Making a Withdrawal (Innate)",
-      "★ Natural Leader (Innate)",
-      "★ Rifleman (Perception)",
-      "★ Making a Withdrawal: When this model would cause an Enemy model to suffer an Injury or Harm, the opposing player may reduce their Stash by 5 Caps per Injury and Harm. For every 5 Caps removed, this model’s crew gains 5 Caps and the Enemy model suffers one less Injury or Harm, as appropriate."
-    ]
-  },
-  "nisha": {
-    "description": "“I lead the Disciples. We’ve got only one rule around here, and that’s keeping the peace of this… alliance. The way we see it, this world stopped caring about rules the moment people started dropping bombs on one another.”",
-    "special": [6,5,5,6,6,6,3,3],
-    "weapon": [
-      "Disciple’s Blade: Melee | 4S Fast Maim",
-      "Plasma Pistol: Pistol (12\") | 4A CQB, Fast Meltdown"
-    ],
-    "perks": [
-      "★ Blitz (Agility)",
-      "★ One Rule (Innate)",
-      "★ Natural Leader (Innate)",
-      "★ One Rule: All Friendly models within this model’s Control Area have the Blitz Perk."
-    ]
-  },
-  "overboss-colter": {
-    "description": "Although not overly popular with the Raiders of Nuka-World, Overboss Colter cuts a dominating figure across the soft drink-themed park. He frequently takes on challengers at the end of a series of trials called the Gauntlet. The fights are never fair, with the odds stacked against Colter’s foes.",
-    "special": [7,5,7,2,3,4,1,4],
-    "weapon": [
-      "Powerful Combat Rifle: Rifle (24\") | 5P Fast Maim",
-      "Iron Fist: Melee | 5S Fast Maim"
-    ],
-    "perks": [
-      "★ Cheater (Innate)",
-      "★ Natural Leader (Innate)",
-      "★ Power Armor (Innate)",
-      "★ Cheater: This model can make the Get Moving, Open Fire, Patch Up, and Rummage Actions while it is Engaged."
-    ]
-  },
-  "nick-valentine": {
-    "description": "Down on your luck and don’t know where to turn? Got a whole lotta questions and not enough answers? Then you need Valentine’s Detective Agency. Based in the shining green jewel of the Commonwealth, we guarantee that you’ll love our service! No case too dangerous, no case too small!",
-    "special": [4,5,5,6,7,4,3,2],
-    "weapon": [
-      "Pipe Revolver: Pistol (12\") | 3A Aim (+1), CQB Pierce"
-    ],
-    "perks": [
-      "★ Adaptable (Intelligence)",
-      "★ Informant (Intelligence)",
-      "★ Rad Resistant (Endurance)"
-    ]
-  },
-  "fist": {
-    "description": "From atop Trinity Tower, Boston is plagued by the barbarity of the Super Mutants. Atop that tower, surrounded by prisoners, is the aptly named Fist. As brutal as a blow from his namesake, this Super Mutant goes to war with a hefty Minigun at their side and the will to see humanity ground into the dirt.",
-    "special": [7,5,6,5,5,5,2,4],
-    "weapon": [
-      "Minigun: Heavy (14\") | 4S Slow, Storm (3) Pierce"
-    ],
-    "perks": [
-      "★ Burly (Innate)",
-      "★ Natural Leader (Innate)",
-      "★ Rad Resistant (Endurance)",
-      "★ Toughness (Endurance)",
-      "★ Unending Stamina (Endurance)"
-    ]
-  },
-  "paladin-danse": {
-    "description": "Paladin Danse has seen enough horrors in the Wasteland to break the power armor of the toughest member of his order. Despite having close friends killed in battle against the Enclave or captured by Super Mutants, Danse has remained loyal to the cause of the Brotherhood. A mission to the Commonwealth may yet be his ultimate test…",
-    "special": [6,6,7,5,5,4,3,4],
-    "weapon": [
-      "Laser Rifle: Rifle (18\") | 4P Ignite (1)"
-    ],
-    "perks": [
-      "★ Know Your Enemy (Super Mutants) (Innate)",
-      "★ Natural Leader (Innate)",
-      "★ Odd Anatomy (Endurance)",
-      "★ Power Armor (Innate)"
-    ]
-  }
+    "the-ghoul": {
+        "description": "Also known as Cooper Howard, The Ghoul was a Vault-Tec spokesman and the lead actor in the box office smash ‘The Man From Deadhorse.’ His days on the silver screen (and most of his skin) long gone, Howard now trades in bullets as a bounty hunter.",
+        "special": [
+            4,
+            6,
+            6,
+            5,
+            4,
+            6,
+            3,
+            3
+        ],
+        "weapon": [
+            "The Ghoul’s Pistol: Pistol (8\") | 5A CQB Maim",
+            "The Ghoul’s Rifle: Rifle (18\") | 5P Fast"
+        ],
+        "perks": [
+            "★ Bloody Mess (Luck)",
+            "★ Fire and Move (Agility)",
+            "★ Improvised Lasso (Innate)",
+            "★ Rad Resistant (Endurance)",
+            "★ The One and Only (Innate)",
+            "★ Wasteland Wanderer (Innate)"
+        ]
+    },
+    "lucy": {
+        "description": "A resident of Vault 33, Lucy lived a comfortable life underground with her brother Norm and her father (Vault Overseer), Hank. Events have come together in such a way to force the naive Lucy out into the violent world beyond the Vault.",
+        "special": [
+            4,
+            5,
+            4,
+            4,
+            5,
+            5,
+            3,
+            2
+        ],
+        "weapon": [
+            "Tranquilizer Pistol: Pistol (10\") | 3A CQB, Tranquilize"
+        ],
+        "perks": [
+            "★ The One and Only (Innate)",
+            "★ Okey Dokey (Innate)",
+            "★ Wasteland Wanderer (Innate)"
+        ]
+    },
+    "maximus": {
+        "description": "Determined and bound by sacred duty Maximus is a recently promoted Squire to Knight Titus. He knows what an honor it is to wear the armor of the Brotherhood of Steel, an honor he takes upon himself as he assumes the identity of His Lord Knight Titus after their untimely death.",
+        "special": [
+            6,
+            4,
+            6,
+            4,
+            4,
+            4,
+            2,
+            2
+        ],
+        "weapon": [
+            "Heavy Assault Rifle: Rifle (20\") | 5P Storm (1)",
+            "Power Armor Punch: Melee | 4S"
+        ],
+        "perks": [
+            "★ Rule No.1: Read The Manual (Innate)",
+            "★ Burly (Innate)",
+            "★ Hardy (Innate)",
+            "★ Rad Resistant (Endurance)",
+            "★ The One and Only (Innate)",
+            "★ Wasteland Wanderer (Innate)"
+        ]
+    },
+    "cx404": {
+        "description": "Some things don’t change in the Wasteland. Dogs are still man’s best friend, able to keep you company and safe from Raiders in equal measure. They even feed themselves, for the most part.",
+        "special": [
+            4,
+            4,
+            4,
+            3,
+            4,
+            4,
+            2,
+            2
+        ],
+        "weapon": [
+            "Claws and Jaws: Melee | 4S"
+        ],
+        "perks": [
+            "★ Beast (Innate)",
+            "★ Fast",
+            "★ Scrapper (Intelligence)",
+            "★ Sic ’Em (Innate)",
+            "★ The One and Only (Innate)",
+            "★ Wasteland Wanderer (Innate)"
+        ]
+    },
+    "king-of-the-park": {
+        "description": "“Nuka-World is under new management. This Wastelander took on the Gauntlet like it was a ride at Kiddie Kingdom. They got all us gangs to stop arguing, re-took the Park and — to top it all off — they found this hella strong gun from someplace. The Commonwealth better get ready because they’re next!”",
+        "special": [
+            7,
+            5,
+            7,
+            6,
+            5,
+            5,
+            3,
+            4
+        ],
+        "weapon": [
+            "Iron Fist: Melee | 5S Fast Maim",
+            "Nuka-nuke Launcher: Heavy (20\") | 5S Area (2”), CQB, Irradiate, One & Done"
+        ],
+        "perks": [
+            "★ Iron Fist (Strength)",
+            "★ King of the Castle (Innate)",
+            "★ Natural Leader (Innate)",
+            "★ Power Armor (Innate)",
+            "★ King of the Castle: This model's crew may use the Nuka-nuke Launcher Ploy. In addition, this model's crew may use the Faction Ploys for The Pack, Operators and Disciples from the Fallout: Factions - Battle for Nuka-World Starter Set.",
+            "★ Ploy: Nuka-nuke Launcher: You may enact this Ploy at the end of any Round if a Friendly King of the Park in on the Battlefield, and not Incapacitated. A Friendly King of the Park model makes a Ranged Attack Action using the Nuka-nuke Launcher Weapon."
+        ]
+    },
+    "bottle-and-cappy": {
+        "description": "Bottle: What is this, Cappy? Cappy: It’s our Profile, Bottle! We’re special named characters that players of Fallout: Factions can add to their crews to give them that extra bit of Nuka-Cola-like zip on the Battlefield! Bottle: Ba… Battlefield, Cappy? I don’t think I want to fight anyone… Cappy: Get it together, Bottle! Those crews need us. Just stay alert and you’ll be just fine!",
+        "special": [
+            4,
+            4,
+            4,
+            6,
+            5,
+            4,
+            4,
+            2
+        ],
+        "weapon": [
+            "Splattercannon: Rifle (22\") | 5P Fast Suppress (3)",
+            "Bladed Commie Whacker: Melee | 2S Fast Pierce"
+        ],
+        "perks": [
+            "★ Every Minimum Acceptable Safety Standard Met (Innate)",
+            "★ Four Leaf Clover (Luck)",
+            "★ Hidden (Agility)",
+            "★ Zip of Nuka-Cola (Innate)",
+            "★ Every Minimum Acceptable Safety Standard Met: This model has no Harm Limit.",
+            "★ Zip of Nuka-Cola: When this model would be Incapacitated, if a crew has a model within 2” of this model, they add a dose of Nuka-Cola to their Crew Roster."
+        ]
+    },
+    "redeye": {
+        "description": "“Listen. Shut up. It’s your main man, RedEye! I’m the one and only host of Raider Radio and let me tell you, I can scrap with the best of them. In fact, the only thing I do better than toasting a Waster like you is shredding tunes on my guitar here! I could’ve run the show at Nuka-World but then, you know, we’d have it far too easy and where’d be the fun in that? Anyway, did I tell you about the time I…”",
+        "special": [
+            5,
+            5,
+            4,
+            6,
+            5,
+            5,
+            2,
+            2
+        ],
+        "weapon": [
+            "The Real Deal: Melee | 4S Fast Maim"
+        ],
+        "perks": [
+            "★ Inspirational (Charisma)",
+            "★ Intimidation (Charisma)",
+            "★ Recruiter (Innate)",
+            "★ Recruiter: If at the end of a game, this model was not Incapacitated, its crew may make the Recruit Story Action once for free during the next Story Phase."
+        ]
+    },
+    "mason": {
+        "description": "Mason makes himself known on the battlefield. Boisterous, loud, and brightly colored, the Pack’s Alpha is a leader to be feared. It is said Mason tarred and feathered the prior Alphas to establish his rule over the animalistic Raider gang. He believes that staying in charge is down to following the rules when you have to and breaking them when you can get away with it.",
+        "special": [
+            5,
+            5,
+            5,
+            6,
+            6,
+            5,
+            3,
+            3
+        ],
+        "weapon": [
+            "Heavy Combat Shotgun: Rifle (10\") | 5P Fast, Storm (1) Maim"
+        ],
+        "perks": [
+            "★ Inspirational (Intelligence)",
+            "★ Natural Leader (Innate)",
+            "★ Survivalist (Innate)",
+            "★ Toughness (Endurance)"
+        ]
+    },
+    "mags-black": {
+        "description": "Mags Black and the other heads of the Operators used to live the high life in the upper tiers of society in Diamond City. They found themselves exiled from the shining jewel of the Commonwealth, before setting up shop in the Parlor in Nuka-World. From there, Mags makes sure the caps keep streaming in. And business is booming.",
+        "special": [
+            5,
+            6,
+            5,
+            5,
+            6,
+            5,
+            2,
+            3
+        ],
+        "weapon": [
+            "Suppressing Handmade Rifle: Rifle (22\") | 4P Fast Suppress (3)"
+        ],
+        "perks": [
+            "★ Making a Withdrawal (Innate)",
+            "★ Natural Leader (Innate)",
+            "★ Rifleman (Perception)",
+            "★ Making a Withdrawal: When this model would cause an Enemy model to suffer an Injury or Harm, the opposing player may reduce their Stash by 5 Caps per Injury and Harm. For every 5 Caps removed, this model’s crew gains 5 Caps and the Enemy model suffers one less Injury or Harm, as appropriate."
+        ]
+    },
+    "nisha": {
+        "description": "“I lead the Disciples. We’ve got only one rule around here, and that’s keeping the peace of this… alliance. The way we see it, this world stopped caring about rules the moment people started dropping bombs on one another.”",
+        "special": [
+            6,
+            5,
+            5,
+            6,
+            6,
+            6,
+            3,
+            3
+        ],
+        "weapon": [
+            "Disciple’s Blade: Melee | 4S Fast Maim",
+            "Plasma Pistol: Pistol (12\") | 4A CQB, Fast Meltdown"
+        ],
+        "perks": [
+            "★ Blitz (Agility)",
+            "★ One Rule (Innate)",
+            "★ Natural Leader (Innate)",
+            "★ One Rule: All Friendly models within this model’s Control Area have the Blitz Perk."
+        ]
+    },
+    "overboss-colter": {
+        "description": "Although not overly popular with the Raiders of Nuka-World, Overboss Colter cuts a dominating figure across the soft drink-themed park. He frequently takes on challengers at the end of a series of trials called the Gauntlet. The fights are never fair, with the odds stacked against Colter’s foes.",
+        "special": [
+            7,
+            5,
+            7,
+            2,
+            3,
+            4,
+            1,
+            4
+        ],
+        "weapon": [
+            "Powerful Combat Rifle: Rifle (24\") | 5P Fast Maim",
+            "Iron Fist: Melee | 5S Fast Maim"
+        ],
+        "perks": [
+            "★ Cheater (Innate)",
+            "★ Natural Leader (Innate)",
+            "★ Power Armor (Innate)",
+            "★ Cheater: This model can make the Get Moving, Open Fire, Patch Up, and Rummage Actions while it is Engaged."
+        ]
+    },
+    "nick-valentine": {
+        "description": "Down on your luck and don’t know where to turn? Got a whole lotta questions and not enough answers? Then you need Valentine’s Detective Agency. Based in the shining green jewel of the Commonwealth, we guarantee that you’ll love our service! No case too dangerous, no case too small!",
+        "special": [
+            4,
+            5,
+            5,
+            6,
+            7,
+            4,
+            3,
+            2
+        ],
+        "weapon": [
+            "Pipe Revolver: Pistol (12\") | 3A Aim (+1), CQB Pierce"
+        ],
+        "perks": [
+            "★ Adaptable (Intelligence)",
+            "★ Informant (Intelligence)",
+            "★ Rad Resistant (Endurance)"
+        ]
+    },
+    "fist": {
+        "description": "From atop Trinity Tower, Boston is plagued by the barbarity of the Super Mutants. Atop that tower, surrounded by prisoners, is the aptly named Fist. As brutal as a blow from his namesake, this Super Mutant goes to war with a hefty Minigun at their side and the will to see humanity ground into the dirt.",
+        "special": [
+            7,
+            5,
+            6,
+            5,
+            5,
+            5,
+            2,
+            4
+        ],
+        "weapon": [
+            "Minigun: Heavy (14\") | 4S Slow, Storm (3) Pierce"
+        ],
+        "perks": [
+            "★ Burly (Innate)",
+            "★ Natural Leader (Innate)",
+            "★ Rad Resistant (Endurance)",
+            "★ Toughness (Endurance)",
+            "★ Unending Stamina (Endurance)"
+        ]
+    },
+    "paladin-danse": {
+        "description": "Paladin Danse has seen enough horrors in the Wasteland to break the power armor of the toughest member of his order. Despite having close friends killed in battle against the Enclave or captured by Super Mutants, Danse has remained loyal to the cause of the Brotherhood. A mission to the Commonwealth may yet be his ultimate test…",
+        "special": [
+            6,
+            6,
+            7,
+            5,
+            5,
+            4,
+            3,
+            4
+        ],
+        "weapon": [
+            "Laser Rifle: Rifle (18\") | 4P Ignite (1)"
+        ],
+        "perks": [
+            "★ Know Your Enemy (Super Mutants) (Innate)",
+            "★ Natural Leader (Innate)",
+            "★ Odd Anatomy (Endurance)",
+            "★ Power Armor (Innate)"
+        ]
+    },
+    "legate-lanius": {
+        "description": "The Monster of the East. Forged in the crucible of conquest, Lanius speaks only in war. Where he treads, the silence of the dead follows. Clad in scavenged iron, face hidden by a mask, he is Caesar’s final word made flesh. Mercy is weakness. Retreat is treason. And those who stand before him? Broken, or buried.",
+        "special": [
+            7,
+            5,
+            7,
+            6,
+            5,
+            5,
+            3
+        ],
+        "weapon": [
+            "Blade of the East: Melee | 5S, Pierce, Maim, Pushback(2), Unwieldy(6)",
+            "Incendiary Grenades: Grenade (8\") | 3A, Ignite(3), Area(2\")"
+        ],
+        "perks": [
+            "★ Burly",
+            "★ Hardy",
+            "★ Charge",
+            "★ Wide Swings"
+        ]
+    }
 }
