@@ -56,6 +56,13 @@
   gap: 1rem;
 }
 
+.footnote {
+  font-size: 0.85rem;
+  opacity: 1;
+  margin-top: 1rem;
+  font-weight: lighter;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
