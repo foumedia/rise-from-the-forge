@@ -130,7 +130,8 @@ function bindLegendRowEvents(scope) {
   (scope || document).querySelectorAll('.legend-clickable').forEach(function(row) {
     // Remove previous listeners by using named handlers
     row.removeEventListener('click', row._legendClickHandler);
-    row.removeEventListener('touchstart', row._legendTouchHandler);
+    row.removeEventListener('touchstart', row._legendTouchStartHandler);
+    row.removeEventListener('touchend', row._legendTouchEndHandler);
 
     // Define named handlers so we can remove them later
     row._legendClickHandler = function () {
@@ -143,13 +144,30 @@ function bindLegendRowEvents(scope) {
       var legend = row.getAttribute('data-legend');
       renderLegendDetails(legend, row);
     };
-    row._legendTouchHandler = function (e) {
-      e.preventDefault();
-      row._legendClickHandler();
+
+    // Touch event handlers for tap detection
+    let touchStartY = 0, touchStartX = 0;
+    row._legendTouchStartHandler = function (e) {
+      if (e.touches && e.touches.length === 1) {
+        touchStartY = e.touches[0].clientY;
+        touchStartX = e.touches[0].clientX;
+      }
+    };
+    row._legendTouchEndHandler = function (e) {
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        const touchEndY = e.changedTouches[0].clientY;
+        const touchEndX = e.changedTouches[0].clientX;
+        // Only trigger if finger didn't move much (i.e., not a scroll)
+        if (Math.abs(touchEndY - touchStartY) < 10 && Math.abs(touchEndX - touchStartX) < 10) {
+          e.preventDefault();
+          row._legendClickHandler();
+        }
+      }
     };
 
     row.addEventListener('click', row._legendClickHandler);
-    row.addEventListener('touchstart', row._legendTouchHandler);
+    row.addEventListener('touchstart', row._legendTouchStartHandler);
+    row.addEventListener('touchend', row._legendTouchEndHandler);
   });
 }
 
