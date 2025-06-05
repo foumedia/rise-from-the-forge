@@ -68,3 +68,26 @@ strong {
   letter-spacing: .1em;
   line-height: 1.4;
 }
+
+
+.flicker-effect {
+  animation: pipboy-flicker 0.6s ease-in-out;
+}
+
+@keyframes pipboy-flicker {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
