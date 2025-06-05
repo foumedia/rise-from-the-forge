@@ -65,13 +65,12 @@ strong {
   padding: 1em 0.5em;
   border-radius: 4px;
   border-left: 3px solid #33ff33;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 1.4;
 }
 
-
 .flicker-effect {
-  animation: pipboy-flicker 0.6s ease-in-out;
+  animation: pipboy-flicker 0.5s ease-in-out;
 }
 
 @keyframes pipboy-flicker {
