@@ -3,9 +3,9 @@ const sections = [
   { title: "PRIZES", file: "./sections/giveaways.html" },
   { title: "RULES", file: "./sections/rules.html" },
   { title: "LEGENDS", file: "./sections/legends.html" },
+  { title: "CREWS", file: "./sections/crews.html" }, // <-- Added Crews section
   { title: "BOUNTIES", file: "./sections/bounties.html" },
   { title: "ASCENSION", file: "./sections/ascension.html" },
-
 ];
 
 const nav = document.getElementById("nav");
