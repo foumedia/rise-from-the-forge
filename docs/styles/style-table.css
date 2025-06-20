@@ -71,3 +71,26 @@ nav button.active {
     line-height: 1;
   }
 }
+
+.subtable {
+  display: table;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+}
+.subtable-row {
+  display: table-row;
+}
+.subtable-label {
+  display: table-cell;
+  font-weight: bold;
+  padding-right: 1em;
+  vertical-align: top;
+  min-width: 140px;
+}
+.subtable-value {
+  display: table-cell;
+  vertical-align: top;
+}

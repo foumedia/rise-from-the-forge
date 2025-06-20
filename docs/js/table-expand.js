@@ -58,24 +58,67 @@ function renderLegendDetailsContent(data) {
 }
 
 function renderHomebrewDetailsContent(data) {
+    // Helper to render any value (object, array, primitive)
+    function renderValue(val) {
+        if (val === null || val === undefined) return '';
+        if (typeof val === 'object') {
+            if (Array.isArray(val)) {
+                return val.map(renderValue).join('<br>');
+            } else {
+                // Render object as key-value pairs (used for sections subtable)
+                return Object.entries(val).map(
+                    ([k, v]) => `
+                        <div class="subtable-row">
+                            <div class="subtable-label">${k}</div>
+                            <div class="subtable-value">${renderValue(v)}</div>
+                        </div>
+                    `
+                ).join('');
+            }
+        }
+        return String(val);
+    }
+
+    // Render all top-level keys except 'description' and 'sections'
+    const rows = Object.entries(data)
+        .filter(([k]) => k !== 'description' && k !== 'sections')
+        .map(([k, v]) => `
+            <div class="legend-details-row-flex">
+                <div class="legend-details-label">${k.charAt(0).toUpperCase() + k.slice(1)}</div>
+                <div class="legend-details-value">${renderValue(v)}</div>
+            </div>
+        `).join('');
+
+    // Render sections as a subtable if present
+    let sectionsHtml = '';
+    if (data.sections && typeof data.sections === 'object') {
+        sectionsHtml = `
+            <div class="legend-details-row-flex">
+                <div class="legend-details-label">Sections</div>
+                <div class="legend-details-value">
+                    <div class="subtable">
+                        ${Object.entries(data.sections).map(
+                            ([k, v]) => `
+                                <div class="subtable-row">
+                                    <div class="subtable-label">${k}</div>
+                                    <div class="subtable-value">${renderValue(v)}</div>
+                                </div>
+                            `
+                        ).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
     return `
     <div class="legend-details-flex">
       <div class="legend-details-row-flex">
         <div class="legend-details-label">Description</div>
-        <div class="legend-details-value">${data.description}</div>
+        <div class="legend-details-value">${data.description || ''}</div>
       </div>
-      <div class="legend-details-row-flex">
-        <div class="legend-details-label">Stats</div>
-        <div class="legend-details-value">
-          <strong>Damage:</strong> ${data.stats.damage}<br>
-          <strong>Weight:</strong> ${data.stats.weight}<br>
-          <strong>Special:</strong> ${data.stats.special}
-        </div>
-      </div>
-      <div class="legend-details-row-flex">
-        <div class="legend-details-label">Creator</div>
-        <div class="legend-details-value">${data.creator}</div>
-      </div>
+      ${rows}
+      ${sectionsHtml}
     </div>
     `;
 }
@@ -97,11 +140,13 @@ function bindExpandableRowEvents({
         // Click handler
         row._expandableClickHandler = function () {
             const next = row.nextElementSibling;
-            if (next && next.classList.contains(detailsRowClass) && next.classList.contains('dynamic')) {
+            // Fix: Only collapse if the next row is a details row and is for this row
+            if (next && next.classList.contains('dynamic') && next.classList.contains(detailsRowClass.split(' ')[0])) {
                 next.remove();
                 return;
             }
-            document.querySelectorAll(`.${detailsRowClass}.dynamic`).forEach(el => el.remove());
+            // Remove all other details rows of this type
+            document.querySelectorAll(`.${detailsRowClass.split(' ')[0]}.dynamic`).forEach(el => el.remove());
             const key = row.getAttribute(keyAttr);
             renderDetails(section, key, row, renderFn, detailsRowClass);
         };
