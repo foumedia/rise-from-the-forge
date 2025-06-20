@@ -1,5 +1,3 @@
-
-
 // NAVIGATION AND CAROUSEL SETUP
 const sections = [
   { title: "INTRO", file: "./sections/intro.html" },
@@ -42,15 +40,27 @@ function loadSectionContent(file, element) {
       element.innerHTML = html;
     })
     .finally(() => {
+      // Generic expandable table logic
       if (file.includes('legends.html')) {
-        loadLegendDetailsJson().then(() => {
-          bindLegendRowEvents(element);
+        loadDetailsJson('legend', './data/legends.json').then(() => {
+          bindExpandableRowEvents({
+            selector: '.legend-clickable:not([data-homebrew])',
+            section: 'legend',
+            keyAttr: 'data-legend',
+            renderFn: renderLegendDetailsContent,
+            detailsRowClass: 'legend-details-row'
+          }, element);
         });
       }
-      // --- Add this block for homebrew ---
       if (file.includes('homebrew.html')) {
-        loadHomebrewDetailsJson().then(() => {
-          bindHomebrewRowEvents(element);
+        loadDetailsJson('homebrew', './data/homebrew.json').then(() => {
+          bindExpandableRowEvents({
+            selector: '.legend-clickable[data-homebrew]',
+            section: 'homebrew',
+            keyAttr: 'data-homebrew',
+            renderFn: renderHomebrewDetailsContent,
+            detailsRowClass: 'homebrew-details-row legend-details-row'
+          }, element);
         });
       }
     })
