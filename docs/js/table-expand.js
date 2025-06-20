@@ -140,15 +140,23 @@ function bindExpandableRowEvents({
         // Click handler
         row._expandableClickHandler = function () {
             const next = row.nextElementSibling;
-            // Fix: Only collapse if the next row is a details row and is for this row
+            const expandedClass = 'expanded';
+            // Collapse if already expanded
             if (next && next.classList.contains('dynamic') && next.classList.contains(detailsRowClass.split(' ')[0])) {
                 next.remove();
+                row.classList.remove(expandedClass);
                 return;
             }
-            // Remove all other details rows of this type
-            document.querySelectorAll(`.${detailsRowClass.split(' ')[0]}.dynamic`).forEach(el => el.remove());
+            // Remove all other details rows of this type and their expanded indicators
+            document.querySelectorAll(`.${detailsRowClass.split(' ')[0]}.dynamic`).forEach(el => {
+                if (el.previousElementSibling && el.previousElementSibling.classList.contains('expandable-clickable')) {
+                    el.previousElementSibling.classList.remove(expandedClass);
+                }
+                el.remove();
+            });
             const key = row.getAttribute(keyAttr);
             renderDetails(section, key, row, renderFn, detailsRowClass);
+            row.classList.add(expandedClass);
         };
 
         // Touch event handlers for tap detection
@@ -179,7 +187,7 @@ function bindExpandableRowEvents({
 // Example usage for legends
 // loadDetailsJson('legend', './data/legends.json').then(() => {
 //     bindExpandableRowEvents({
-//         selector: '.legend-clickable:not([data-homebrew])',
+//         selector: '.expandable-clickable:not([data-expandable])',
 //         section: 'legend',
 //         keyAttr: 'data-legend',
 //         renderFn: renderLegendDetailsContent,
@@ -190,9 +198,9 @@ function bindExpandableRowEvents({
 // Example usage for homebrew
 // loadDetailsJson('homebrew', './data/homebrew.json').then(() => {
 //     bindExpandableRowEvents({
-//         selector: '.legend-clickable[data-homebrew]',
+//         selector: '.expandable-clickable[data-expandable]',
 //         section: 'homebrew',
-//         keyAttr: 'data-homebrew',
+//         keyAttr: 'data-expandable',
 //         renderFn: renderHomebrewDetailsContent,
 //         detailsRowClass: 'homebrew-details-row legend-details-row'
 //     });

@@ -44,7 +44,7 @@ function loadSectionContent(file, element) {
       if (file.includes('legends.html')) {
         loadDetailsJson('legend', './data/legends.json').then(() => {
           bindExpandableRowEvents({
-            selector: '.legend-clickable:not([data-homebrew])',
+            selector: '.expandable-clickable:not([data-expandable])',
             section: 'legend',
             keyAttr: 'data-legend',
             renderFn: renderLegendDetailsContent,
@@ -55,9 +55,9 @@ function loadSectionContent(file, element) {
       if (file.includes('homebrew.html')) {
         loadDetailsJson('homebrew', './data/homebrew.json').then(() => {
           bindExpandableRowEvents({
-            selector: '.legend-clickable[data-homebrew]',
+            selector: '.expandable-clickable[data-expandable]',
             section: 'homebrew',
-            keyAttr: 'data-homebrew',
+            keyAttr: 'data-expandable',
             renderFn: renderHomebrewDetailsContent,
             detailsRowClass: 'homebrew-details-row legend-details-row'
           }, element);

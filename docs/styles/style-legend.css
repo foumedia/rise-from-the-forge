@@ -81,7 +81,7 @@
   flex-shrink: 0;
 }
 
-.legend-clickable {
+.expandable-clickable {
   cursor: pointer;
   transition: background 0.5s;
 }

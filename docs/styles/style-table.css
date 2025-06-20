@@ -94,3 +94,25 @@ nav button.active {
   display: table-cell;
   vertical-align: top;
 }
+
+.green-table-row.expandable-clickable {
+  cursor: pointer;
+  position: relative;
+}
+
+.green-table-row.expandable-clickable::before {
+  content: "▶";
+  color: rgb(51, 255, 51, 1);
+  font-size: 1.1em;
+  margin-right: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.green-table-row.expandable-clickable.expanded::before,
+.green-table-row.expandable-clickable + .legend-details-row.dynamic::before,
+.green-table-row.expandable-clickable + .homebrew-details-row.dynamic::before {
+  content: "▼";
+  transform: rotate(0deg);
+}
