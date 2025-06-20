@@ -1,22 +1,4 @@
 {
-  "sample": {
-    "description": "Forged from the remnants of a pre-war reactor, the Radstorm Blade emits a faint green glow and deals additional radiation damage.",
-    "stats": {
-      "damage": "3 Physical, 2 Radiation",
-      "weight": "4 lbs",
-      "special": "On hit: 10% chance to inflict Radiation Sickness"
-    },
-    "creator": "Vault 42 Homebrew Collective"
-  },
-  "vault-dog": {
-    "description": "Once a test subject in Vault 81, this dog now roams the wasteland with a keen nose for trouble and a heart of gold.",
-    "stats": {
-      "damage": "1 Physical (bite)",
-      "weight": "60 lbs",
-      "special": "Can detect hidden enemies and retrieve small objects"
-    },
-    "creator": "Wasteland Tails"
-  },
   "goliath-lurks": {
     "description": "A massive, mutated creature that lurks in the wasteland, challenging crews to prove their strength and cunning.",
     "title": "WASTELAND OBJECTIVE 11: GOLIATH LURKS",
