@@ -107,7 +107,11 @@ nav button.active {
   margin-right: 0.5em;
   display: inline-block;
   vertical-align: middle;
-  transition: transform 0.2s;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.green-table-row.expandable-clickable:hover::before {
+  color: #050e04;
 }
 
 .green-table-row.expandable-clickable.expanded::before {
