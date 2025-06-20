@@ -189,7 +189,7 @@ function bindExpandableRowEvents({
 //     bindExpandableRowEvents({
 //         selector: '.expandable-clickable:not([data-expandable])',
 //         section: 'legend',
-//         keyAttr: 'data-legend',
+//         keyAttr: 'data-expandable',
 //         renderFn: renderLegendDetailsContent,
 //         detailsRowClass: 'legend-details-row'
 //     });

@@ -101,7 +101,7 @@ nav button.active {
 }
 
 .green-table-row.expandable-clickable::before {
-  content: "▶";
+  content: "▼";
   color: rgb(51, 255, 51, 1);
   font-size: 1.1em;
   margin-right: 0.5em;
@@ -113,6 +113,6 @@ nav button.active {
 .green-table-row.expandable-clickable.expanded::before,
 .green-table-row.expandable-clickable + .legend-details-row.dynamic::before,
 .green-table-row.expandable-clickable + .homebrew-details-row.dynamic::before {
-  content: "▼";
+  content: "▲";
   transform: rotate(0deg);
 }
