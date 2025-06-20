@@ -1,0 +1,78 @@
+@media print {
+  * {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    border-color: #000 !important;
+  }
+
+  a, a:visited {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  nav, .nav, nav button, nav button.active {
+    background: #fff !important;
+    color: #000 !important;
+    border: none !important;
+    text-shadow: none !important;
+    font-size: 11pt !important;
+  }
+
+  html, body {
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+    font-family: "Share Tech Mono", monospace !important;
+  }
+
+  h1 { font-size: 20pt !important; }
+  h2 { font-size: 16pt !important; }
+  h3 { font-size: 14pt !important; }
+  h4, h5, h6 { font-size: 12pt !important; }
+
+  .green-table,
+  .green-table-header,
+  .green-table-row,
+  .green-table-category-row,
+  .legend-details-row,
+  .legend-details-label,
+  .legend-details-value,
+  .subtable,
+  .subtable-label,
+  .subtable-value {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: #000 !important;
+    font-size: 11pt !important;
+  }
+
+  .green-table-row:hover,
+  .green-table-row.expandable-clickable:hover::before,
+  .green-table-row.expandable-clickable::before,
+  .green-table-row.expandable-clickable.expanded::before {
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* Remove flicker and animation effects */
+  .flicker-effect {
+    animation: none !important;
+  }
+
+  /* Hide navigation if not needed in print */
+  nav, .nav {
+    display: none !important;
+  }
+
+  /* Remove any background images */
+  body, html {
+    background-image: none !important;
+  }
+
+  .disclaimer,
+  .print-hidden {
+    display: none !important;
+  }
+}

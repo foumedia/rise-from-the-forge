@@ -3,6 +3,7 @@
 @import url("./style-table.css");
 @import url("./style-legend.css");
 @import url("./style-layout.css");
+@import url("./style-print.css");
 
 * {
   margin: 0;
