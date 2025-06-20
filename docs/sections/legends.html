@@ -34,7 +34,6 @@
     <div>For Hire (Fee: 87)</div>
     <div>CHAMPION, LEADER</div>
   </div>
-
   <div class="green-table-row legend-clickable" data-legend="overboss-colter">
     <div>Overboss Colter</div>
     <div>For Hire (Fee: 72)</div>
@@ -87,16 +86,20 @@
     <div>CHAMPION, LEADER</div>
   </div>
   <div class="green-table-category-row">New Vegas</div>
-
   <div class="green-table-row legend-clickable" data-legend="legate-lanius">
     <div>Legate Lanius</div>
     <div>For Hire (Fee: 76)</div>
     <div>UNOFFICIAL, CHAMPION</div>
   </div>
-
-
   <p class="footnote">
     [If a LEGEND is labeled UNOFFICIAL, your opponent must be comfortable and
     consent to the Unit being hired during the Prepare Advantages step.]
   </p>
 </div>
+<script>
+  // Ensure the abstraction is called after the table is rendered and data is loaded.
+  // This will work if legendDetailsData is already loaded by main.js.
+  if (typeof window.bindLegendExpandableTable === "function") {
+    window.bindLegendExpandableTable(document);
+  }
+</script>
