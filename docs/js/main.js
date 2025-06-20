@@ -4,10 +4,10 @@ const sections = [
   { title: "PRIZES", file: "./sections/giveaways.html" },
   { title: "RULES", file: "./sections/rules.html" },
   { title: "LEGENDS", file: "./sections/legends.html" },
+  { title: "HOMEBREW", file: "./sections/homebrew.html" }, // <-- Added Homebrew section
   { title: "CREWS", file: "./sections/crews.html" }, // <-- Added Crews section
   { title: "BOUNTIES", file: "./sections/bounties.html" },
   { title: "ASCENSION", file: "./sections/ascension.html" },
-  { title: "HOMEBREW", file: "./sections/homebrew.html" }, // <-- Added Homebrew section
 ];
 
 
