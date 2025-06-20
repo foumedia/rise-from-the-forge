@@ -21,7 +21,7 @@ sections.forEach((section, i) => {
   nav.appendChild(btn);
 
   const div = document.createElement("div");
-  div.className = "carousel-section-left carousel-section";
+  div.className = "carousel-section";
   div.dataset.file = section.file;
   carousel.appendChild(div);
 });
@@ -121,7 +121,7 @@ function loadAllSections() {
 window.onbeforeprint = loadAllSections;
 
 // Restore single-section view after printing
-window.onafterprint = function() {
+window.onafterprint = function () {
   const hash = window.location.hash.substring(1);
   const index = sections.findIndex((section) => section.title === hash);
   setActive(index !== -1 ? index : 0);
