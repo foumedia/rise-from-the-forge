@@ -107,4 +107,24 @@ function handleHashChange() {
 window.addEventListener("hashchange", handleHashChange);
 handleHashChange();
 
+function loadAllSections() {
+  const carouselSections = document.querySelectorAll(".carousel-section");
+  carouselSections.forEach((el, i) => {
+    if (!el.innerHTML.trim()) {
+      loadSectionContent(el.dataset.file, el);
+    }
+    el.classList.add("active");
+  });
+}
+
+// Optionally, you can call loadAllSections() before printing
+window.onbeforeprint = loadAllSections;
+
+// Restore single-section view after printing
+window.onafterprint = function() {
+  const hash = window.location.hash.substring(1);
+  const index = sections.findIndex((section) => section.title === hash);
+  setActive(index !== -1 ? index : 0);
+};
+
 // END OF NAVIGATION AND CAROUSEL SETUP

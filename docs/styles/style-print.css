@@ -75,4 +75,19 @@
   .print-hidden {
     display: none !important;
   }
+
+  .carousel-section {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  .carousel-section:not(:first-child) {
+    margin-top: 2em !important;
+  }
 }
