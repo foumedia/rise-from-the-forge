@@ -1,16 +1,16 @@
 .legend-details-row {
   display: none;
-  background: rgb(51, 255, 51, 0.05);
-  color: rgb(51, 255, 51, 1);
+  background: var(--background-color-alt, rgb(51, 255, 51, 0.05));
+  color: var(--accent-color);
   width: 100%;
   padding: 0.5rem;
-  border-top: 1px solid rgb(51, 255, 51, 0.2);
-  border-bottom: 1px solid rgb(51, 255, 51, 0.2);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   box-sizing: border-box;
   font-size: 1.2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .legend-details-row:not(.active) {
@@ -40,7 +40,7 @@
   min-width: 110px;
   max-width: 140px;
   font-weight: bold;
-  color: rgb(51, 255, 51, 1);
+  color: var(--accent-color);
   flex-shrink: 0;
   padding-right: 0.5em;
   text-align: right;
@@ -48,8 +48,11 @@
 
 .legend-details-value {
   flex: 1 1 0;
-  color: rgb(51, 255, 51, 1);
+  color: var(--accent-color);
   word-break: break-word;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  line-height: 1.7;
 }
 
 .special-flex-header,
@@ -69,7 +72,7 @@
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;
-  color: rgb(51, 255, 51, 1);
+  color: var(--accent-color);
   background: transparent;
   border: none;
   padding: 0.2em 0;

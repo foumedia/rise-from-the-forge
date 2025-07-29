@@ -1,0 +1,34 @@
+/* Color variables for theme toggling */
+:root {
+  --background-color: #050e04;
+  --background-color-alt: #111c10;
+  --text-color: rgb(51, 255, 51, 0.9);
+  --text-color-muted: rgb(51, 255, 51, 0.6);
+  --text-color-strong: rgb(51, 255, 51, 0.9);
+  --accent-color: rgb(51, 255, 51, 1);
+  --accent-color-light: rgb(51, 255, 51, 0.6);
+  --accent-color-dark: #050e04;
+  --accent-color-yellow: #ffd700;
+  --accent-color-orange: #ffa500;
+  --border-color: rgb(51, 255, 51, 0.2);
+  --border-color-strong: rgb(51, 255, 51, 1);
+  --scrollbar-thumb: rgb(51, 255, 51, 1);
+  --scrollbar-thumb-hover: #66ff66;
+}
+
+body.legible {
+  --background-color: #e1e9e0;
+  --background-color-alt: #f4f4f4;
+  --text-color: #111;
+  --text-color-muted: #444;
+  --text-color-strong: #000;
+  --accent-color: #222;
+  --accent-color-light: #888;
+  --accent-color-dark: #fff;
+  --accent-color-yellow: #099601;
+  --accent-color-orange: #204d26;
+  --border-color: #888;
+  --border-color-strong: #222;
+  --scrollbar-thumb: #888;
+  --scrollbar-thumb-hover: #aaa;
+}
