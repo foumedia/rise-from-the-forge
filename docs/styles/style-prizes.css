@@ -1,0 +1,37 @@
+/* Giveaways list layout */
+.giveaways-list-block {
+  max-width: 900px;
+  margin: 0 auto 2em auto;
+}
+.giveaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em 0;
+}
+.giveaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+.giveaway-image {
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+.giveaway-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.giveaway-text h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--accent-color);
+  display: block;
+}
+.giveaway-text span {
+  display: block;
+  font-size: 1em;
+  color: var(--text-color);
+}

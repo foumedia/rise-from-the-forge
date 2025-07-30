@@ -1,9 +1,46 @@
+/* Giveaways list layout */
+.giveaways-list-block {
+  max-width: 900px;
+  margin: 0 auto 2em auto;
+}
+.giveaways-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5em 0;
+}
+.giveaway-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+}
+.giveaway-image {
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+.giveaway-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.giveaway-text h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--accent-color);
+  display: block;
+}
+.giveaway-text span {
+  display: block;
+  font-size: 1em;
+  color: var(--text-color);
+}
 .green-table {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
-  color: rgb(51, 255, 51, 1);
-  background-color: #050e04;
+  color: var(--accent-color);
+  background-color: var(--background-color-alt);
   font-size: 1.2rem;
 }
 
@@ -17,17 +54,25 @@
 
 .green-table-header {
   font-weight: bold;
-  background-color: rgb(51, 255, 51, 0.6);
-  color: #050e04;
+  background-color: var(--accent-color-light);
+  color: var(--accent-color-dark);
 }
 
 .green-table-row:nth-child(even) {
-  background-color: #050e04;
+  background-color: var(--background-color-alt);
 }
 
+
 .green-table-row:hover {
-  background-color: rgb(51, 255, 51, 1);
-  color: #121212;
+  background-color: var(--accent-color);
+  color: var(--accent-color-dark);
+}
+
+/* Keep hover color scheme when expanded */
+.green-table-row.expandable-clickable.expanded,
+.green-table-row.expandable-clickable.expanded:hover {
+  background-color: var(--accent-color);
+  color: var(--accent-color-dark);
 }
 
 .green-table div {
@@ -43,7 +88,7 @@
 nav {
   display: flex;
   justify-content: space-around;
-  border-bottom: 1px solid rgb(51, 255, 51, 1);
+  border-bottom: 1px solid var(--accent-color);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
@@ -52,18 +97,18 @@ nav {
 nav button {
   background: none;
   border: none;
-  color: rgb(51, 255, 51, 1);
+  color: var(--accent-color);
   font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
-  text-shadow: 0 0 5px rgb(51, 255, 51, 1);
+  text-shadow: 0 0 5px var(--accent-color);
   margin: 0.5rem;
   flex: 1 1 auto;
 }
 
 nav button.active {
-  background-color: rgb(51, 255, 51, 1);
-  color: #050e04;
+  background-color: var(--accent-color);
+  color: var(--accent-color-dark);
 }
 
 @media (max-width: 768px) {
@@ -102,7 +147,7 @@ nav button.active {
 
 .green-table-row.expandable-clickable::before {
   content: "▼ |";
-  color: rgb(51, 255, 51, 1);
+  color: var(--accent-color);
   font-size: 1.1em;
   margin-right: 0.5em;
   display: inline-block;
@@ -111,7 +156,7 @@ nav button.active {
 }
 
 .green-table-row.expandable-clickable:hover::before {
-  color: #050e04;
+  color: var(--accent-color-dark);
 }
 
 .green-table-row.expandable-clickable.expanded::before {
