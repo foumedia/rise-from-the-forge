@@ -19,7 +19,13 @@
     <div class="container">
       <nav id="nav"></nav>
       <div id="color-toggle-bar" style="width:100%;text-align:center;margin:0.5em 0 1.5em 0;">
-        <button id="colorToggle" class="color-toggle-btn">Switch Colors</button>
+        <button id="colorToggle" class="color-toggle-slide" aria-pressed="false">
+          <span class="toggle-label toggle-label-left">Robco Terminal</span>
+          <span class="toggle-slider">
+            <span class="toggle-handle"></span>
+          </span>
+          <span class="toggle-label toggle-label-right">Modern Terminal</span>
+        </button>
       </div>
       <div class="content-area scrollbar" id="carousel">
         <div class="content-area-left"></div>
@@ -29,15 +35,7 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/table-expand.js"></script>
-    <script>
-      const colorToggle = document.getElementById('colorToggle');
-      colorToggle.addEventListener('click', function () {
-        document.body.classList.toggle('legible');
-        colorToggle.textContent = document.body.classList.contains('legible')
-          ? 'Modern Terminal'
-          : 'Robco Terminal';
-      });
-    </script>
+
 
     <footer class="print-hidden" style="text-align:center; font-size:0.8rem; color:#888; margin-top:2rem;">
       <p>

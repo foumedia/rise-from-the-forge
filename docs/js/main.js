@@ -127,4 +127,16 @@ window.onafterprint = function () {
   setActive(index !== -1 ? index : 0);
 };
 
+
+const colorToggle = document.getElementById('colorToggle');
+function updateToggleAria() {
+  const isLegible = document.body.classList.contains('legible');
+  colorToggle.setAttribute('aria-pressed', isLegible ? 'true' : 'false');
+}
+colorToggle.addEventListener('click', function () {
+  document.body.classList.toggle('legible');
+  updateToggleAria();
+});
+updateToggleAria();
+
 // END OF NAVIGATION AND CAROUSEL SETUP
