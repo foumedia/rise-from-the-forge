@@ -1,0 +1,105 @@
+<h2 id="LEGENDS">Legends of the Wasteland</h2>
+<p>Available Legends of the Wasteland. This list is not final.</p>
+<!-- TODO: Add legends source location for reference. -->
+<div class="green-table">
+  <div class="green-table-header">
+    <div>Legend Name</div>
+    <div>Status</div>
+    <div>Notes</div>
+  </div>
+  <div class="green-table-category-row">Hollywood Heroes</div>
+  <div class="green-table-row expandable-clickable" data-legend="the-ghoul">
+    <div>The Ghoul</div>
+    <div>For Hire (Fee: 65)</div>
+    <div>CHAMPION</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="lucy">
+    <div>Lucy</div>
+    <div>For Hire (Fee: 33)</div>
+    <div>GRUNT</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="maximus">
+    <div>Maximus</div>
+    <div>For Hire (Fee: 42)</div>
+    <div>GRUNT</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="cx404">
+    <div>CX404</div>
+    <div>For Hire (Fee: 17)</div>
+    <div>GRUNT</div>
+  </div>
+  <div class="green-table-category-row">Nukaworld</div>
+  <div class="green-table-row expandable-clickable" data-legend="king-of-the-park">
+    <div>King of the Park</div>
+    <div>For Hire (Fee: 87)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="overboss-colter">
+    <div>Overboss Colter</div>
+    <div>For Hire (Fee: 72)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="bottle-and-cappy">
+    <div>Bottle and Cappy - All Fizzed Up</div>
+    <div>For Hire (Fee: 48)</div>
+    <div>GRUNT</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="redeye">
+    <div>Redeye</div>
+    <div>For Hire (Fee: 50)</div>
+    <div>CHAMPION</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="mason">
+    <div>Mason</div>
+    <div>For Hire (Fee: 63)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="mags-black">
+    <div>Mags Black</div>
+    <div>For Hire (Fee: 61)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="nisha">
+    <div>Nisha</div>
+    <div>For Hire (Fee: 68)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-row">
+    <div>Oswald - The Outrageous</div>
+    <div>For Hire (FEE: TBD)</div>
+    <div>CHAMPION</div>
+  </div>
+  <div class="green-table-category-row">Boston Personalities</div>
+  <div class="green-table-row expandable-clickable" data-legend="nick-valentine">
+    <div>Nick Valentine</div>
+    <div>For Hire (Fee: 37)</div>
+    <div>CHAMPION</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="paladin-danse">
+    <div>Paladin Danse</div>
+    <div>For Hire (Fee: 78)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-row expandable-clickable" data-legend="fist">
+    <div>Fist</div>
+    <div>For Hire (Fee: 72)</div>
+    <div>CHAMPION, LEADER</div>
+  </div>
+  <div class="green-table-category-row">New Vegas</div>
+  <div class="green-table-row expandable-clickable" data-legend="legate-lanius">
+    <div>Legate Lanius</div>
+    <div>For Hire (Fee: 76)</div>
+    <div>UNOFFICIAL, CHAMPION</div>
+  </div>
+  <p class="footnote">
+    [If a LEGEND is labeled UNOFFICIAL, your opponent must be comfortable and
+    consent to the Unit being hired during the Prepare Advantages step.]
+  </p>
+</div>
+<script>
+  // Ensure the abstraction is called after the table is rendered and data is loaded.
+  // This will work if legendDetailsData is already loaded by main.js.
+  if (typeof window.bindLegendExpandableTable === "function") {
+    window.bindLegendExpandableTable(document);
+  }
+</script>
