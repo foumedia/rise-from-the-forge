@@ -58,7 +58,12 @@ function loadSectionContent(file, element) {
             selector: '.expandable-clickable[data-expandable]',
             section: 'homebrew',
             keyAttr: 'data-expandable',
-            renderFn: renderHomebrewDetailsContent,
+            renderFn: function(key, data) {
+              // Wrap the original renderHomebrewDetailsContent, replacing \n with <br>
+              const html = renderHomebrewDetailsContent(key, data);
+              // Replace \n with <br> in all values
+              return html.replace(/\n/g, '');
+            },
             detailsRowClass: 'homebrew-details-row legend-details-row'
           }, element);
         });

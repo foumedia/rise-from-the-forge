@@ -76,7 +76,7 @@ function renderHomebrewDetailsContent(data) {
                 ).join('');
             }
         }
-        return String(val);
+        return String(val).replace(/\n/g, '</br>');
     }
 
     // Render all top-level keys except 'description' and 'sections'
@@ -98,13 +98,13 @@ function renderHomebrewDetailsContent(data) {
                 <div class="legend-details-value">
                     <div class="subtable">
                         ${Object.entries(data.sections).map(
-                            ([k, v]) => `
+            ([k, v]) => `
                                 <div class="subtable-row">
                                     <div class="subtable-label">${k}</div>
                                     <div class="subtable-value">${renderValue(v)}</div>
                                 </div>
                             `
-                        ).join('')}
+        ).join('')}
                     </div>
                 </div>
             </div>
