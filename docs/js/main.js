@@ -1,13 +1,13 @@
 // NAVIGATION AND CAROUSEL SETUP
 const sections = [
-  { title: "INTRO", file: "./sections/intro.html" },
-  { title: "PRIZES", file: "./sections/giveaways.html" },
-  { title: "RULES", file: "./sections/rules.html" },
-  { title: "LEGENDS", file: "./sections/legends.html" },
-  { title: "HOMEBREW", file: "./sections/homebrew.html" }, // <-- Added Homebrew section
-  { title: "CREWS", file: "./sections/crews.html" }, // <-- Added Crews section
-  { title: "BOUNTIES", file: "./sections/bounties.html" },
-  { title: "ASCENSION", file: "./sections/ascension.html" },
+  { title: "INTRO", file: "./campaign-pages/intro.html" },
+  { title: "PRIZES", file: "./campaign-pages/giveaways.html" },
+  { title: "RULES", file: "./campaign-pages/rules.html" },
+  { title: "LEGENDS", file: "./campaign-pages/legends.html" },
+  { title: "HOMEBREW", file: "./campaign-pages/homebrew.html" }, // <-- Added Homebrew section
+  { title: "CREWS", file: "./campaign-pages/crews.html" }, // <-- Added Crews section
+  { title: "BOUNTIES", file: "./campaign-pages/bounties.html" },
+  { title: "ASCENSION", file: "./campaign-pages/ascension.html" },
 ];
 
 
