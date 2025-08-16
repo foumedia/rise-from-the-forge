@@ -12,8 +12,8 @@
             3
         ],
         "weapon": [
-            "The Ghoul’s Pistol: Pistol (8\") | 5A CQB Maim",
-            "The Ghoul’s Rifle: Rifle (18\") | 5P Fast"
+            "The Ghoul’s Pistol: Pistol (8\") | 5A | CQB | Maim",
+            "The Ghoul’s Rifle: Rifle (18\") | 5P | Fast"
         ],
         "perks": [
             "★ Bloody Mess (Luck)",
@@ -37,7 +37,7 @@
             2
         ],
         "weapon": [
-            "Tranquilizer Pistol: Pistol (10\") | 3A CQB, Tranquilize"
+            "Tranquilizer Pistol: Pistol (10\") | 3A |CQB | Tranquilize"
         ],
         "perks": [
             "★ The One and Only (Innate)",
@@ -58,7 +58,7 @@
             2
         ],
         "weapon": [
-            "Heavy Assault Rifle: Rifle (20\") | 5P Storm (1)",
+            "Heavy Assault Rifle: Rifle (20\") | 5P | Storm | (1)",
             "Power Armor Punch: Melee | 4S"
         ],
         "perks": [
@@ -107,7 +107,7 @@
             4
         ],
         "weapon": [
-            "Iron Fist: Melee | 5S Fast Maim",
+            "Iron Fist: Melee | 5S | Fast | Maim",
             "Nuka-nuke Launcher: Heavy (20\") | 5S Area (2”), CQB, Irradiate, One & Done"
         ],
         "perks": [
@@ -132,8 +132,8 @@
             2
         ],
         "weapon": [
-            "Splattercannon: Rifle (22\") | 5P Fast Suppress (3)",
-            "Bladed Commie Whacker: Melee | 2S Fast Pierce"
+            "Splattercannon: Rifle (22\") | 5P | Fast | Suppress | (3)",
+            "Bladed Commie Whacker: Melee | 2S | Fast | Pierce"
         ],
         "perks": [
             "★ Every Minimum Acceptable Safety Standard Met (Innate)",
@@ -157,7 +157,7 @@
             2
         ],
         "weapon": [
-            "The Real Deal: Melee | 4S Fast Maim"
+            "The Real Deal: Melee | 4S | Fast | Maim"
         ],
         "perks": [
             "★ Inspirational (Charisma)",
@@ -179,7 +179,7 @@
             3
         ],
         "weapon": [
-            "Heavy Combat Shotgun: Rifle (10\") | 5P Fast, Storm (1) Maim"
+            "Heavy Combat Shotgun: Rifle (10\") | 5P | Fast | Storm (1) | Maim"
         ],
         "perks": [
             "★ Inspirational (Intelligence)",
@@ -201,7 +201,7 @@
             3
         ],
         "weapon": [
-            "Suppressing Handmade Rifle: Rifle (22\") | 4P Fast Suppress (3)"
+            "Suppressing Handmade Rifle: Rifle (22\") | 4P | Fast | Suppress (3)"
         ],
         "perks": [
             "★ Making a Withdrawal (Innate)",
@@ -224,7 +224,7 @@
         ],
         "weapon": [
             "Disciple’s Blade: Melee | 4S Fast Maim",
-            "Plasma Pistol: Pistol (12\") | 4A CQB, Fast Meltdown"
+            "Plasma Pistol: Pistol (12\") | 4A |  CQB | Fast | Meltdown"
         ],
         "perks": [
             "★ Blitz (Agility)",
@@ -232,6 +232,27 @@
             "★ Natural Leader (Innate)",
             "★ One Rule: All Friendly models within this model’s Control Area have the Blitz Perk."
         ]
+    },
+    "oswald-the-outrageous": {
+        "description": "“Oswald!?! Don't say his name kid, he'll hear ya! Worse yet, he might show up! Ya know he does real magic right?...”",
+        "special": [
+            5,
+            4,
+            6,
+            6,
+            5,
+            4,
+            3,
+            2
+        ],
+        "weapon": [
+            "Sword of Wonders: Melee | 5S | Fast | Pierce"
+        ],
+        "perks": [
+            "★ Intimidation (Charisma)",
+            "★ Rad Resistant (Innate)"
+        ],
+        "specialAbility": ["Magic Tricks: A crew that includes Oswald the Outrageous has access to the following two Ploys:", "Ploy: Give it up for my Ghoulfriends!: Enact this Ploy when you choose Oswald the Outrageous as the Active model for your turn.  Place Three Feral Ghoulfriend Models on the battlefield so that each one is within 3 inches of Oswald the Outrageous. These models count as being part of your crew for the rest of the game. (GRUNT) Ghoulfriends: [S3 P2 E4 C1 I1 A4 L1 H1]  WEAPON: [Feral Ghoul Swipe - Melee - 3S - Fast] PERKS: [Intimidation(Charisma), Rad Resistant (Endurance)]"]
     },
     "overboss-colter": {
         "description": "Although not overly popular with the Raiders of Nuka-World, Overboss Colter cuts a dominating figure across the soft drink-themed park. He frequently takes on challengers at the end of a series of trials called the Gauntlet. The fights are never fair, with the odds stacked against Colter’s foes.",
@@ -246,8 +267,8 @@
             4
         ],
         "weapon": [
-            "Powerful Combat Rifle: Rifle (24\") | 5P Fast Maim",
-            "Iron Fist: Melee | 5S Fast Maim"
+            "Powerful Combat Rifle: Rifle (24\") | 5P | Fast | Maim",
+            "Iron Fist: Melee | 5S | Fast | Maim"
         ],
         "perks": [
             "★ Cheater (Innate)",
@@ -269,7 +290,7 @@
             2
         ],
         "weapon": [
-            "Pipe Revolver: Pistol (12\") | 3A Aim (+1), CQB Pierce"
+            "Pipe Revolver: Pistol (12\") | 3A | Aim (+1) | CQB | Pierce"
         ],
         "perks": [
             "★ Adaptable (Intelligence)",
@@ -290,7 +311,7 @@
             4
         ],
         "weapon": [
-            "Minigun: Heavy (14\") | 4S Slow, Storm (3) Pierce"
+            "Minigun: Heavy (14\") | 4S | Slow | Storm (3) | Pierce"
         ],
         "perks": [
             "★ Burly (Innate)",
@@ -313,7 +334,7 @@
             4
         ],
         "weapon": [
-            "Laser Rifle: Rifle (18\") | 4P Ignite (1)"
+            "Laser Rifle: Rifle (18\") | 4P | Ignite (1)"
         ],
         "perks": [
             "★ Know Your Enemy (Super Mutants) (Innate)",
@@ -335,8 +356,8 @@
             4
         ],
         "weapon": [
-            "Blade of the East: Melee | 5S, Pierce, Maim, Pushback(2), Unwieldy(6)",
-            "Incendiary Grenades: Grenade (8\") | 3A, Ignite(2), Area(2\")"
+            "Blade of the East: Melee | 5S | Unwieldy(6)| Pierce  Maim  Pushback(2) ",
+            "Incendiary Grenades: Grenade (8\") | 3A | Ignite(2) | Area(2\")"
         ],
         "perks": [
             "★ Burly",
