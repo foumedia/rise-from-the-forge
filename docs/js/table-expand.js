@@ -24,45 +24,37 @@ function renderDetails(section, key, afterRow, renderFn, detailsRowClass) {
 
 // Example render functions for each section
 function renderLegendDetailsContent(data) {
-        return `
-        <div class="legend-details-flex">
-            <div class="legend-details-row-flex">
-                <div class="legend-details-label">Description</div>
-                <div class="legend-details-value">${data.description}</div>
-            </div>
-            <div class="legend-details-row-flex">
-                <div class="legend-details-label">SPECIAL ♥</div>
-                <div class="legend-details-value">
-                    <div class="special-flex-header">
-                        ${['S', 'P', 'E', 'C', 'I', 'A', 'L', '♥'].map(l => `<span class="special-col">${l}</span>`).join('')}
-                    </div>
-                    <div class="special-flex-values">
-                        ${data.special.map(val => `<span class="special-col-value">${val}</span>`).join('')}
-                    </div>
-                </div>
-            </div>
-            <div class="legend-details-row-flex">
-                <div class="legend-details-label">Weapon</div>
-                <div class="legend-details-value">
-                    ${Array.isArray(data.weapon) ? data.weapon.map(w => `${w}`).join('<br>') : data.weapon}
-                </div>
-            </div>
-            <div class="legend-details-row-flex">
-                <div class="legend-details-label">Perks</div>
-                <div class="legend-details-value">
-                    ${Array.isArray(data.perks) ? data.perks.map(p => `${p}`).join('<br>') : data.perks}
-                </div>
-            </div>
-            ${Array.isArray(data.specialAbility) && data.specialAbility.length > 0 ? `
-            <div class="legend-details-row-flex">
-                <div class="legend-details-label">Special Ability</div>
-                <div class="legend-details-value">
-                    ${data.specialAbility.map(sa => `${sa}`).join('<br>')}
-                </div>
-            </div>
-            ` : ''}
+    return `
+    <div class="legend-details-flex">
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Description</div>
+        <div class="legend-details-value">${data.description}</div>
+      </div>
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">SPECIAL ♥</div>
+        <div class="legend-details-value">
+          <div class="special-flex-header">
+            ${['S', 'P', 'E', 'C', 'I', 'A', 'L', '♥'].map(l => `<span class="special-col">${l}</span>`).join('')}
+          </div>
+          <div class="special-flex-values">
+            ${data.special.map(val => `<span class="special-col-value">${val}</span>`).join('')}
+          </div>
         </div>
-        `;
+      </div>
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Weapon</div>
+        <div class="legend-details-value">
+          ${Array.isArray(data.weapon) ? data.weapon.map(w => `${w}`).join('<br>') : data.weapon}
+        </div>
+      </div>
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Perks</div>
+        <div class="legend-details-value">
+          ${Array.isArray(data.perks) ? data.perks.map(p => `${p}`).join('<br>') : data.perks}
+        </div>
+      </div>
+    </div>
+    `;
 }
 
 function renderHomebrewDetailsContent(data) {
