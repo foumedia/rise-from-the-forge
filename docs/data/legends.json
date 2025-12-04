@@ -252,7 +252,10 @@
             "★ Intimidation (Charisma)",
             "★ Rad Resistant (Innate)"
         ],
-        "specialAbility": ["Magic Tricks: A crew that includes Oswald the Outrageous has access to the following two Ploys:", "Ploy: Give it up for my Ghoulfriends!: Enact this Ploy when you choose Oswald the Outrageous as the Active model for your turn.  Place Three Feral Ghoulfriend Models on the battlefield so that each one is within 3 inches of Oswald the Outrageous. These models count as being part of your crew for the rest of the game. (GRUNT) Ghoulfriends: [S3 P2 E4 C1 I1 A4 L1 H1]  WEAPON: [Feral Ghoul Swipe - Melee - 3S - Fast] PERKS: [Intimidation(Charisma), Rad Resistant (Endurance)]"]
+        "specialAbility": [
+            "Magic Tricks: A crew that includes Oswald the Outrageous has access to the following two Ploys:",
+            "Ploy: Give it up for my Ghoulfriends!: Enact this Ploy when you choose Oswald the Outrageous as the Active model for your turn.  Place Three Feral Ghoulfriend Models on the battlefield so that each one is within 3 inches of Oswald the Outrageous. These models count as being part of your crew for the rest of the game. (GRUNT) Ghoulfriends: [S3 P2 E4 C1 I1 A4 L1 H1]  WEAPON: [Feral Ghoul Swipe - Melee - 3S - Fast] PERKS: [Intimidation(Charisma), Rad Resistant (Endurance)]"
+        ]
     },
     "overboss-colter": {
         "description": "Although not overly popular with the Raiders of Nuka-World, Overboss Colter cuts a dominating figure across the soft drink-themed park. He frequently takes on challengers at the end of a series of trials called the Gauntlet. The fights are never fair, with the odds stacked against Colter’s foes.",
@@ -365,6 +368,74 @@
             "★ Lifegiver",
             "★ Charge",
             "★ Wide Swings"
+        ]
+    },
+    "lorenzo-cabot": {
+        "description": "Behind enough robotic firepower to drop an entire Raider gang,  the Cabot household harbors a secret. The inside of their plush mansion looks a little too clean, and they are a little too unaffected by the current state of the world. The answer to this riddle lies at the bottom of Parsons State Insane Asylum. Lorenzo Cabot wears  a strange crown on his head and possesses abilities that fit better  in a tall tale than reality.",
+        "special": [
+            5,
+            5,
+            5,
+            6,
+            6,
+            4,
+            2,
+            1
+        ],
+        "weapon": [
+            "Psychic Powers: Heavy(10\") | 2S | CQB| Haul(3) Pushback(3)"
+        ],
+        "perks": [
+            "★ Immortal (Endurance)",
+            "★ Mind Control (Innate) : This model can make Open Fire Actions using weapons carried by an Enemy model within its Control Area. Visibility is checked from the Enemy model with the weapon used by this model. During this Open Fire Action, this model uses its own Luck statistic and the appropriate Test statistic value from the Enemy model. Weapons with the One  & Done Trait cannot be used via this Perk.",
+            "★ Mysterious Serum (Innate): This model never Suffers an Injury from Excess Harm, even if another rule would say it  does. This model is not Incapacitated unless the number of Injury boxes marked equals or exceeds their Health, and  they have Harm equal to their Harm Limit.",
+            "★ Point Blank (Innate): This model can take the Open Fire Action while Engaged."
+        ]
+    },
+    "lily-bowen": {
+        "description": "Lily Bowen is a caring grandmother who also happens to be a towering, blue Super Mutant with an equally large sword. Once a Vault dweller before being kidnapped by the Master, she was dunked into a vat of Forced Evolutionary Virus and emerged as an assassin for the forces gathering around Mariposa Military Base. When the Master’s forces were disbanded, she headed off towards the Mojave. Lily is now a Jacobstown resident, a safe haven for mutantkind.",
+        "special": [
+            7,
+            5,
+            6,
+            4,
+            4,
+            4,
+            2,
+            3
+        ],
+        "weapon": [
+            "Vertibird Blade: Melee | 5S | Wind Up| Pierce"
+        ],
+        "perks": [
+            "★ Burly (Innate)",
+            "★ Rad Resistant (Endurance)",
+            "★ Protector (Strength): The first time in each Round that a friendly Grunt model inside of this model’s Control Area would Suffer an Injury, this model can move up to 4” towards the  model that caused the Injury.",
+            "★ Stealth Boy (Innate):  This model may not be Targeted by Ranged Attacks unless it is within the Perception range of the attacking model.",
+            "★ Toughness (Endurance)"
+        ]
+    },
+    "marcus": {
+        "description": "Civilization has not looked kindly upon Super Mutants, mainly due to the warmongering efforts of the Master and others. Marcus sticks out among his kind for his attempts to bridge the societal gap between the two groups. A previous companion of the Chosen One, Marcus has led communities in Broken Hills and Jacobstown, all in the effort to show that mutants and humans can coexist peacefully.",
+        "special": [
+            6,
+            4,
+            6,
+            5,
+            6,
+            5,
+            3,
+            3
+        ],
+        "weapon": [
+            "Iron Fist: Melee | 5S | Fast| Maim"
+        ],
+        "perks": [
+            "★ Burly",
+            "★ Iron Fist (Strength)",
+            "★ Natural Leader (Innate)",
+            "★ Rad Resistant (Endurance)",
+            "★ Strategist (Intelligence)"
         ]
     }
 }
