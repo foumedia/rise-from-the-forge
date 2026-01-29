@@ -23,13 +23,11 @@ function renderDetails(section, key, afterRow, renderFn, detailsRowClass) {
 }
 
 // Example render functions for each section
-function renderLegendDetailsContent(data) {
+
+// Helper function to render SPECIAL attributes
+function renderSpecialAttribute(special) {
+    if (!Array.isArray(special) || special.length === 0) return '';
     return `
-    <div class="legend-details-flex">
-      <div class="legend-details-row-flex">
-        <div class="legend-details-label">Description</div>
-        <div class="legend-details-value">${data.description}</div>
-      </div>
       <div class="legend-details-row-flex">
         <div class="legend-details-label">SPECIAL ♥</div>
         <div class="legend-details-value">
@@ -37,22 +35,100 @@ function renderLegendDetailsContent(data) {
             ${['S', 'P', 'E', 'C', 'I', 'A', 'L', '♥'].map(l => `<span class="special-col">${l}</span>`).join('')}
           </div>
           <div class="special-flex-values">
-            ${data.special.map(val => `<span class="special-col-value">${val}</span>`).join('')}
+            ${special.map(val => `<span class="special-col-value">${val}</span>`).join('')}
           </div>
         </div>
       </div>
+    `;
+}
+
+// Helper function to render Weapon field
+function renderWeaponField(weapon) {
+    if (!weapon) return '';
+    return `
       <div class="legend-details-row-flex">
         <div class="legend-details-label">Weapon</div>
         <div class="legend-details-value">
-          ${Array.isArray(data.weapon) ? data.weapon.map(w => `${w}`).join('<br>') : data.weapon}
+          ${Array.isArray(weapon) ? weapon.map(w => `${w}`).join('<br>') : weapon}
         </div>
       </div>
+    `;
+}
+
+// Helper function to render Perks field
+function renderPerksField(perks) {
+    if (!perks) return '';
+    return `
       <div class="legend-details-row-flex">
         <div class="legend-details-label">Perks</div>
         <div class="legend-details-value">
-          ${Array.isArray(data.perks) ? data.perks.map(p => `${p}`).join('<br>') : data.perks}
+          ${Array.isArray(perks) ? perks.map(p => `${p}`).join('<br>') : perks}
         </div>
       </div>
+    `;
+}
+
+// Helper function to render Special Ability field
+function renderSpecialAbilityField(specialAbility) {
+    if (!specialAbility || (Array.isArray(specialAbility) && specialAbility.length === 0)) return '';
+    return `
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Special Ability</div>
+        <div class="legend-details-value">
+          ${Array.isArray(specialAbility) ? specialAbility.map(ability => `${ability}`).join('<br>') : specialAbility}
+        </div>
+      </div>
+    `;
+}
+
+// Helper function to render a companion (nested legend structure without companions)
+function renderCompanion(companion) {
+    return `
+      <div style="margin-left: 1rem; padding: 0.5rem; border-left: 2px solid var(--accent-color); margin-top: 0.5rem;">
+        <div class="legend-details-row-flex">
+          <div class="legend-details-label">Name</div>
+          <div class="legend-details-value">${companion.name || 'Unnamed'}</div>
+        </div>
+        ${companion.description ? `
+        <div class="legend-details-row-flex">
+          <div class="legend-details-label">Description</div>
+          <div class="legend-details-value">${companion.description}</div>
+        </div>
+        ` : ''}
+        ${renderSpecialAttribute(companion.special)}
+        ${renderWeaponField(companion.weapon)}
+        ${renderPerksField(companion.perks)}
+        ${renderSpecialAbilityField(companion.specialAbility)}
+      </div>
+    `;
+}
+
+// Helper function to render Companions field
+function renderCompanionsField(companions) {
+    if (!companions || (Array.isArray(companions) && companions.length === 0)) return '';
+    return `
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Companions</div>
+        <div class="legend-details-value">
+          ${Array.isArray(companions) ? companions.map(c => renderCompanion(c)).join('') : renderCompanion(companions)}
+        </div>
+      </div>
+    `;
+}
+
+// Main function to render legend details
+function renderLegendDetailsContent(data) {
+    return `
+    <div class="legend-details-flex">
+      <div class="legend-details-row-flex">
+        <div class="legend-details-label">Description</div>
+        <div class="legend-details-value">${data.description}</div>
+      </div>
+      ${renderSpecialAttribute(data.special)}
+      ${renderWeaponField(data.weapon)}
+      ${renderPerksField(data.perks)}
+      ${renderSpecialAbilityField(data.specialAbility)}
+      ${renderCompanionsField(data.companions)}
     </div>
     `;
 }

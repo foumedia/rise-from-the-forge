@@ -250,11 +250,34 @@
         ],
         "perks": [
             "★ Intimidation (Charisma)",
-            "★ Rad Resistant (Innate)"
+            "★ Rad Resistant (Endurance)"
         ],
         "specialAbility": [
             "Magic Tricks: A crew that includes Oswald the Outrageous has access to the following two Ploys:",
-            "Ploy: Give it up for my Ghoulfriends!: Enact this Ploy when you choose Oswald the Outrageous as the Active model for your turn.  Place Three Feral Ghoulfriend Models on the battlefield so that each one is within 3 inches of Oswald the Outrageous. These models count as being part of your crew for the rest of the game. (GRUNT) Ghoulfriends: [S3 P2 E4 C1 I1 A4 L1 H1]  WEAPON: [Feral Ghoul Swipe - Melee - 3S - Fast] PERKS: [Intimidation(Charisma), Rad Resistant (Endurance)]"
+            "Ploy: Give it up for my Ghoulfriends!: Enact this Ploy when you choose Oswald the Outrageous as the Active model for your turn.  Place Three Feral Ghoulfriend Models on the battlefield so that each one is within 3 inches of Oswald the Outrageous. These models count as being part of your crew for the rest of the game."
+        ],
+        "companions": [
+            {
+                "name": "Ghoulfriend (Grunt)",
+                "description": "Feral Ghoulfriend: These ghouls were once showgirls at Nuka-World’s Kiddie Kingdom.",
+                "special": [
+                    3,
+                    2,
+                    4,
+                    1,
+                    1,
+                    4,
+                    1,
+                    1
+                ],
+                "weapon": [
+                    "Feral Ghoul Swipe: Melee | 3S | - | Fast"
+                ],
+                "perks": [
+                    "★ Intimidation(Charisma)",
+                    "★ Rad Resistant (Endurance)"
+                ]
+            }
         ]
     },
     "overboss-colter": {
@@ -436,6 +459,308 @@
             "★ Natural Leader (Innate)",
             "★ Rad Resistant (Endurance)",
             "★ Strategist (Intelligence)"
+        ]
+    },
+    "preston": {
+        "description": "Leader of the Sanctuary 2 Survivors. Preston has dedicated himself to protecting the people of Sanctuary 2 and helping them rebuild their lives in the Wasteland. A natural leader, he inspires those around him to work together for the greater good.",
+        "special": [
+            4,
+            6,
+            6,
+            6,
+            6,
+            5,
+            5,
+            3
+        ],
+        "weapon": [
+            "Combat Rifle (up2): Rifle(30\") | 5P | - | Maim"
+        ],
+        "perks": [
+            "★ Natural Leader (Innate)",
+            "★ Inspirational (Charisma)",
+            "★ Survivalist (Innate)",
+            "★ Lend Luck (Luck)"
+        ]
+    },
+    "tooth": {
+        "description": "Tooth is the luckiest bush hunter to exist. A skilled tracker and marksman, Tooth is always on the lookout for threats to his people and is quick to take action when danger arises.",
+        "special": [
+            4,
+            6,
+            6,
+            6,
+            6,
+            5,
+            5,
+            3
+        ],
+        "weapon": [
+            "Double-Barreled Shotgun (up2): Rifle(12\") | 4P | Storm(3) | Maim"
+        ],
+        "perks": [
+            "★ Survivalist (Innate)",
+            "★ Penetrator (Perception)",
+            "★ Toughness (Endurance)"
+        ]
+    },
+    "shaggy": {
+        "description": "Shaggy is a resourceful scavenger who roams the Wasteland with his trusty Securitron companion. Together, they navigate the dangers of the post-apocalyptic world, always on the lookout for valuable salvage and new adventures",
+        "special": [
+            5,
+            5,
+            8,
+            6,
+            6,
+            5,
+            3,
+            4
+        ],
+        "weapon": [
+            "Sawn-Off Shotgun: Rifle(12\") | 4P | CQB, Storm(3) | Maim",
+            "Officer Sword: Melee | 4S | Fast | Pierce"
+        ],
+        "perks": [
+            "★ Natural Leader (Innate)",
+            "★ Roboteer (Companion)",
+            "★ Inspirational (Charisma)",
+            "★ Survivalist (Innate)",
+            "★ Lifegiver (Endurance)",
+            "★ Party Boy (Charisma)"
+        ],
+        "companions": [
+            {
+                "name": "Securitron MK II (Grunt)",
+                "description": "Secutirons are versatile robots designed for a variety of tasks, including security and combat. Equipped with advanced weaponry and armor, they are formidable allies in the Wasteland.",
+                "special": [
+                    5,
+                    6,
+                    7,
+                    0,
+                    1,
+                    2,
+                    2,
+                    2
+                ],
+                "weapon": [
+                    "Robot Lasers: Rifle(16\") | 4P | - | Fast | Suppress(1)",
+                    "Securitron SMG: Rifle(16\") | 3P | Storm(3) | Suppress(2)",
+                    "Shoulder Launchers: Heavy(12\") | 3S | Area(2\") | Maim",
+                    "Robot Bash: Melee | 4S | - | -"
+                ],
+                "perks": [
+                    "★ Burly (Innate)",
+                    "★ Hardy (Innate)",
+                    "★ Machine (Innate)",
+                    "★ Programmed (Innate)"
+                ]
+            }
+        ]
+    },
+    "knox": {
+        "description": "Knox was an elite sniper in the NCR but since traveled East to escape the dry heat of the Mojave. Now he uses his skills to protect the innocent and take down those who would threaten the fragile peace of the Wasteland.",
+        "special": [
+            3,
+            9,
+            5,
+            5,
+            6,
+            4,
+            4,
+            2
+        ],
+        "weapon": [
+            "Precision Hunting Rifle (up3): Rifle(30\") | 4P | Aim(+3 + Called Shot 2) | Pierce"
+        ],
+        "perks": [
+            "★ Survivalist (Innate)",
+            "★ Sniper (Perception)",
+            "★ Called Shot (Perception)",
+            "★ Grim Reapers Sprint (Luck)",
+            "★ Four Leaf Clover (Luck)"
+        ]
+    },
+    "beetle": {
+        "description": "Beetle lived amongst the bugs of the Glowing Sea before being discovered by a group of scavengers. With his unique ability to communicate with insects, Beetle has become an invaluable asset to any crew, using his skills to gather information and navigate the treacherous terrain of the Wasteland.",
+        "special": [
+            3,
+            5,
+            6,
+            5,
+            6,
+            4,
+            2,
+            3
+        ],
+        "weapon": [
+            "Double-Barreled Shotgun (up1): Rifle(12\") | 4P | Storm(2) | Maim"
+        ],
+        "perks": [
+            "★ Survivalist (Innate)",
+            "★ Sniper (Perception)",
+            "★ Creature Tamer (Companion)",
+            "★ Lifegiver (Endurance)",
+            "★ Party Boy (Charisma)"
+        ],
+        "companions": [
+            {
+                "name": "3 x BloodBug (Grunt) ",
+                "description": "Bloodbugs are large, aggressive insects that feed on the blood of living creatures. They are known for their painful bites and their ability to swarm and overwhelm their prey.",
+                "special": [
+                    3,
+                    2,
+                    3,
+                    1,
+                    1,
+                    3,
+                    1,
+                    1
+                ],
+                "weapon": [
+                    "Bloodbug Proboscis: Melee | 4S | - | Poison(2) "
+                ],
+                "perks": [
+                    "★ Beast (Innate)",
+                    "★ Flight (Innate)",
+                    "★ Rad Resistant (Endurance)",
+                    "★ Disposable (Innate)",
+                    "★ Swarm (Innate)"
+                ]
+            }
+        ]
+    },
+    "el-chapo": {
+        "description": "El Chapo is an Operator Leader who has made a name for himself in the Wasteland through his cunning and ruthlessness. With a reputation for being both a shrewd negotiator and a deadly combatant, El Chapo commands respect from allies and enemies alike.",
+        "special": [
+            6,
+            7,
+            6,
+            6,
+            7,
+            6,
+            4,
+            3
+        ],
+        "weapon": [
+            "Plasma Pistol: Pistol(12\") | 4A | CQB | Meltdown"
+        ],
+        "perks": [
+            "★ Roboteer(Innate)"
+        ],
+        "companions": [
+            {
+                "name": "Eyebot (Grunt)",
+                "description": "Eyebots are small, hovering robots equipped with advanced surveillance and communication technology. They are often used for reconnaissance and can provide valuable intel on enemy movements and positions.",
+                "special": [
+                    2,
+                    4,
+                    4,
+                    0,
+                    1,
+                    4,
+                    1,
+                    1
+                ],
+                "weapon": [
+                    "Eyebot Lasers: Pistol(10\") | 3A | CQB | Ignite(1)"
+                ],
+                "perks": [
+                    "★ Bullet Magnet (Innate)",
+                    "★ Eye Catching (Innate)",
+                    "★ Flight (Innate)",
+                    "★ Machine (Innate)",
+                    "★ Programmed (Innate)"
+                ]
+            }
+        ]
+    },
+    "bugsy": {
+        "description": "Bugsy is an Operator Champion with a Missile Launcher. Known for his strategic mind and deadly precision, Bugsy is a force to be reckoned with on the battlefield.",
+        "special": [
+            7,
+            7,
+            6,
+            5,
+            6,
+            5,
+            4,
+            2
+        ],
+        "weapon": [
+            "Missile Launcher: Heavy(26\") | 4S | Area(2\") Slow | Maim"
+        ],
+        "perks": [
+            "★ Creature Tamer (Companion)",
+            "★ Toughness (Endurance)",
+            "★ Lucky Charm (Luck)"
+        ],
+        "companions": [
+            {
+                "name": "Brahmin (Grunt)",
+                "description": "Brahmin are two-headed cattle that have adapted to the harsh conditions of the Wasteland. They are commonly used as pack animals and sources of food and milk by settlers and traders.",
+                "special": [
+                    4,
+                    3,
+                    5,
+                    1,
+                    1,
+                    2,
+                    1,
+                    2
+                ],
+                "weapon": [
+                    "Trample: Melee | 4S | Wind Up | Pushback(3)"
+                ],
+                "perks": [
+                    "★ Beast (Innate)",
+                    "★ Rad Resistant (Endurance)"
+                ]
+            }
+        ]
+    },
+    "donnie-brasco": {
+        "description": "Donnie  Brasco operated as an undercover agent within the Operators before being discovered and forced to flee to the Wasteland. Now, he uses his skills in combat to survive in the harsh environment of the post-apocalyptic world.",
+        "special": [
+            4,
+            7,
+            4,
+            4,
+            5,
+            4,
+            2,
+            2
+        ],
+        "weapon": [
+            "Combat Rifle: Rifle(24\") | 4P | - | Maim"
+        ],
+        "perks": [
+            "★ Roboteer(Innate)"
+        ],
+        "companions": [
+            {
+                "name": "Eyebot (Grunt)",
+                "description": "Eyebots are small, hovering robots equipped with advanced surveillance and communication technology. They are often used for reconnaissance and can provide valuable intel on enemy movements and positions.",
+                "special": [
+                    2,
+                    4,
+                    4,
+                    0,
+                    1,
+                    4,
+                    1,
+                    1
+                ],
+                "weapon": [
+                    "Eyebot Lasers: Pistol(10\") | 3A | CQB | Ignite(1)"
+                ],
+                "perks": [
+                    "★ Bullet Magnet (Innate)",
+                    "★ Eye Catching (Innate)",
+                    "★ Flight (Innate)",
+                    "★ Machine (Innate)",
+                    "★ Programmed (Innate)"
+                ]
+            }
         ]
     }
 }
