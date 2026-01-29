@@ -474,7 +474,7 @@
             3
         ],
         "weapon": [
-            "Combat Rifle (up2): Rifle(30\") | 5P | - | Maim"
+            "Combat Rifle: Rifle(30\")* | 5P* | - | Maim"
         ],
         "perks": [
             "★ Natural Leader (Innate)",
@@ -496,7 +496,7 @@
             3
         ],
         "weapon": [
-            "Double-Barreled Shotgun (up2): Rifle(12\") | 4P | Storm(3) | Maim"
+            "Double-Barreled Shotgun: Rifle(12\") | 4P* | Storm(3)* | Maim"
         ],
         "perks": [
             "★ Survivalist (Innate)",
@@ -531,7 +531,7 @@
         "companions": [
             {
                 "name": "Securitron MK II (Grunt)",
-                "description": "Secutirons are versatile robots designed for a variety of tasks, including security and combat. Equipped with advanced weaponry and armor, they are formidable allies in the Wasteland.",
+                "description": "Securitrons are versatile robots designed for a variety of tasks, including security and combat. Equipped with advanced weaponry and armor, they are formidable allies in the Wasteland.",
                 "special": [
                     5,
                     6,
@@ -570,7 +570,7 @@
             2
         ],
         "weapon": [
-            "Precision Hunting Rifle (up3): Rifle(30\") | 4P | Aim(+3 + Called Shot 2) | Pierce"
+            "Precision Hunting Rifle: Rifle(30\")* | 4P* | Aim(+3* + Called Shot +2) | Pierce"
         ],
         "perks": [
             "★ Survivalist (Innate)",
@@ -593,7 +593,7 @@
             3
         ],
         "weapon": [
-            "Double-Barreled Shotgun (up1): Rifle(12\") | 4P | Storm(2) | Maim"
+            "Double-Barreled Shotgun: Rifle(12\") | 4P*| Storm(2) | Maim"
         ],
         "perks": [
             "★ Survivalist (Innate)",
