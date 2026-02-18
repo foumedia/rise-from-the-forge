@@ -24,5 +24,10 @@
     },
     "PLOY: Commie Detected": "\"Communism detected on American soil! Deploying extreme prejudice.\" Before the end of the Round, before Liberty Prime Activates, Choose a model from any Crew on the map. When Liberty Prime performs 'March of Liberty', it will advance toward the selected model’s position instead of the Nuka-Cola Crate when performing its 12\" movement. All other Liberty Prime actions and attacks resolve as normal. If multiple players want to play this Ploy at the same step, only the player who would have gone first in Initiative this round resolves this Ploy.",
     "LEGENDARY CHEM: NUKA COLA QUANTUM": "(Homebrew) When selecting the Active Model for the turn, you may spend a Nuka Cola Quantum to remove 1 Injury and all Harm from that model. Increase the model's Control Area by 3\" and all SPECIAL stats by 1 until the End of the turn."
+  },
+  "nukaworld-destinations": {
+    "description": "A community made Destination Module for NukaWorld, featuring new locations and challenges.",
+    "title": "NukaWorld Destinations",
+    "link": "<iframe frameborder='0' src='https://itch.io/embed/4288738' width='552' height='167'><a href='https://bastet100.itch.io/destinations-rulebook-for-fallout-factions'>Destinations Rulebook for Fallout Factions by bastet100</a></iframe>    "
   }
 }
